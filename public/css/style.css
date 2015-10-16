@@ -1,0 +1,22 @@
+.btn-buy{
+
+  background-color: rgb(240, 72, 72);
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 0px;
+  outline-color: rgb(255, 255, 255);
+  outline-style: none;
+  outline-width: 0px;
+  text-decoration: none;
+  width: 90px;
+}

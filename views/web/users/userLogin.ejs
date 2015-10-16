@@ -1,0 +1,65 @@
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade loginModal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width: 440px;">
+        <div class="modal-content">
+            <div class="userlogin">
+                <div class="ulpanel">
+                    <form>
+                        <p class="login-title">
+                            <span id="ul-s2">会员登录</span>
+                            <span id="ul-s3">还没有账号 <a href="##">立即注册</a></span>
+                        </p>
+                        <p class="email-login">邮箱登录<span class="submitwarning">邮箱格式不正确</span></p>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="邮箱">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                        </div>
+
+                        <div id="ul-s5"><button type="submit" class="btn btn-blue btn-login">登录</button>
+
+                            <a href="###" id="ul-s6">忘记密码 ? </a>
+
+                        </div>
+
+                    </form>
+
+                </div>
+                <div id="ulline"></div>
+                <div class="clear"></div>
+                <div class="qtpanel"><p>用第三方帐号直接登录</p>
+                    <div>
+                        <a id="qql" href="###">
+                            <span class="yy-icon yy-qql"></span>QQ账号登录
+                        </a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="btn-close" id="closeLoginModal">
+                    <a class="pwclose" href="###">
+                        <div class="pwclose_h"></div>
+                        <div class="pwclose_s"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="/js/blue.js" type="text/javascript"></script>
+<script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('#closeLoginModal').click(function(){
+            $('#myModal').modal('hide')
+        })
+    })
+</script>

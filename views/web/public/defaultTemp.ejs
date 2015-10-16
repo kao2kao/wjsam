@@ -1,0 +1,53 @@
+<!--默认全局模板框架-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="<%=siteConfig.cmsDescription%>">
+    <meta content="<%=siteConfig.keywords%>" name="keywords" />
+    <meta name="author" content="DoraCMS">
+    <title><%=siteConfig.title%></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="/components/angular/angular.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/newblue.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="/js/ie-emulation-modes-warning.js"></script>
+    <script>
+        //百度统计
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?e9db3ea87c0c407aacb2d81e8ba569c6";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+
+<body ng-app="webApp">
+<%- include header %>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <%-body %>
+        </div>
+        <div class="col-md-4">
+            <%- include righter %>
+        </div>
+    </div>
+</div>
+<!-- BEGIN FOOTER -->
+<%- include footer %>
+
