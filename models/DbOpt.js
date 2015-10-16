@@ -1,18 +1,18 @@
 /**
  * Created by Administrator on 2015/09/28.
  */
-
 var url = require('url');
-//������
+//加密类
 var crypto = require("crypto");
 var mongoose = require('mongoose');
-//վ������
+//站点配置
 var settings = require("../models/common/settings");
 
 var dbURL = 'mongodb://115.29.44.230:27017/admin';
 var dbOptions = {'user':'kaokao','pass':'kao123456kao'};
 var db = mongoose.connect(dbURL,dbOptions);
 
+//信息删除操作
 var DbOpt = {
     del: function (obj, req, res, logMsg) {
         var params = url.parse(req.url, true);
@@ -25,7 +25,7 @@ var DbOpt = {
             }
         })
     },
-    findAll: function (obj, req, res, logMsg) {//����ָ���������м�¼
+    findAll: function (obj, req, res, logMsg) {//查找指定对象所有记录
         obj.find({}, function (err, result) {
             if (err) {
 
@@ -35,7 +35,7 @@ var DbOpt = {
             }
         })
     },
-    findOne: function (obj, req, res, logMsg, key) { //����ID���ҵ�����¼
+    findOne: function (obj, req, res, logMsg, key) { //根据ID查找单条记录
         var params = url.parse(req.url, true);
         var currentId = (params.query.uid).split('.')[0];
         obj.findOne({_id: currentId}, function (err, result) {
@@ -76,7 +76,7 @@ var DbOpt = {
         var limit = Number(params.query.limit);
         var pageInfo;
 
-//    ����������ѯ��¼(������������ݣ���������ѯ)
+        //根据条件查询记录(如果有条件传递，则按条件查询)
         var query;
         if (conditions && conditions.length > 1) {
             query = obj.find().or(conditions);
@@ -109,7 +109,8 @@ var DbOpt = {
         })
     },
 
-    getPaginationResult: function (obj, req, res, q, filed) {// ͨ�ò�ѯ������ҳ��ע��������ݸ�ʽ,filedΪָ���ֶ�
+
+    getPaginationResult: function (obj, req, res, q, filed) {// 通用查询，带分页，注意参数传递格式,filed为指定字段
         var searchKey = req.query.searchKey;
         var page = parseInt(req.query.page);
         var limit = parseInt(req.query.limit);
@@ -117,26 +118,26 @@ var DbOpt = {
         if (!limit) limit = 15;
         var order = req.query.order;
         var sq = {}, Str, A = 'problemID', B = 'asc';
-        if (order) {    //�Ƿ�����������
+        if (order) {    //是否有排序请求
             Str = order.split('_');
             A = Str[0];
             B = Str[1];
-            sq[A] = B;    //�����������Ӳ�ѯ��������������ΪA�Ǳ���
+            sq[A] = B;    //关联数组增加查询条件，更加灵活，因为A是变量
         } else {
-            sq.date = -1;    //Ĭ�������ѯ����
+            sq.date = -1;    //默认排序查询条件
         }
 
         var startNum = (page - 1) * limit;
         var resultList;
         var resultNum;
-        if (q && q.length > 1) { // ������ֻҪ����һ������
+        if (q && q.length > 1) { // 多条件只要其中一条符合
             resultList = obj.find().or(q, filed).sort(sq).skip(startNum).limit(limit);
             resultNum = obj.find().or(q, filed).count();
         } else {
             resultList = obj.find(q).sort(sq).skip(startNum).limit(limit);
             resultNum = obj.find(q).count();
         }
-        //        ��ҳ����
+        //        分页参数
         var pageInfo = {
             "totalItems": resultNum,
             "currentPage": page,
@@ -151,18 +152,18 @@ var DbOpt = {
         return datasInfo;
     },
 
-    getDatasByParam: function (obj, req, res, q) {// ͨ�ò�ѯlist������ҳ��ע��������ݸ�ʽ,ͨ��express-promiseȥ���˻ص���ʽ��������
-//        Ĭ�ϲ�ѯ���м�¼��������˳������Ͳ�ѯ���ּ�¼
+    getDatasByParam: function (obj, req, res, q) {// 通用查询list不带分页，注意参数传递格式,通过express-promise去掉了回调方式返回数据
+//        默认查询所有记录，有条件顺带排序和查询部分记录
         var order = req.query.order;
         var limit = parseInt(req.query.limit);
         var sq = {}, Str, A = 'problemID', B = 'asc';
-        if (order) {    //�Ƿ�����������
+        if (order) {    //是否有排序请求
             Str = order.split('_');
             A = Str[0];
             B = Str[1];
-            sq[A] = B;    //�����������Ӳ�ѯ��������������ΪA�Ǳ���
+            sq[A] = B;    //关联数组增加查询条件，更加灵活，因为A是变量
         } else {
-            sq.date = -1;    //Ĭ�������ѯ����
+            sq.date = -1;    //默认排序查询条件
         }
         if (!limit) {
             return obj.find(q).sort(sq);
@@ -179,7 +180,7 @@ var DbOpt = {
         return keyArr;
     },
 
-    getCount: function (obj, req, res, conditions) { // ��ѯָ�����������
+    getCount: function (obj, req, res, conditions) { // 查询指定对象的数量
         obj.count(conditions, function (err, count) {
             if (err) {
                 console.log(err);
@@ -191,14 +192,14 @@ var DbOpt = {
 
         });
     },
-    encrypt: function (data, key) { // �������
+    encrypt: function (data, key) { // 密码加密
         var cipher = crypto.createCipher("bf", key);
         var newPsd = "";
         newPsd += cipher.update(data, "utf8", "hex");
         newPsd += cipher.final("hex");
         return newPsd;
     },
-    decrypt: function (data, key) { //�������
+    decrypt: function (data, key) { //密码解密
         var decipher = crypto.createDecipher("bf", key);
         var oldPsd = "";
         oldPsd += decipher.update(data, "hex", "utf8");
@@ -206,6 +207,5 @@ var DbOpt = {
         return oldPsd;
     }
 };
-
 
 module.exports = DbOpt;

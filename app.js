@@ -59,7 +59,8 @@ var movie = require('./routes/movie');
 var spider = require('./later/spider');
 var detail = require('./routes/detail');
 
-
+//加载定时任务
+require('./later/task');
 
 // 定义EJS模板引擎和模板文件位置，也可以使用jade或其他模型引擎
 app.set('views', path.join(__dirname, 'views'));
