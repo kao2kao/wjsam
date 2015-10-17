@@ -124,7 +124,7 @@ var DbOpt = {
             B = Str[1];
             sq[A] = B;    //关联数组增加查询条件，更加灵活，因为A是变量
         } else {
-            sq.date = -1;    //默认排序查询条件
+            sq.gmtCreated = -1;    //默认排序查询条件：创建时间倒序
         }
 
         var startNum = (page - 1) * limit;
