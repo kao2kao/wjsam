@@ -34,7 +34,7 @@ log4js.configure({
     appenders: [
         {type: 'console'}, {
             type: 'dateFile',
-            filename: 'logs/access.log',
+            filename: '/usr/local/webApps/logs/wjsam/access.log',
             maxLogSize: 1024,
             backups: 4,
             pattern: "-yyyy-MM-dd",
