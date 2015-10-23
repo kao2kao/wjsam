@@ -22,8 +22,8 @@ module.exports = {
 
 //    站点基础信息配置
 
-    SITETITLE : '前端开发俱乐部', // 站点名称
-    SITEDOMAIN : 'http://www.html-js.cn', // 站点域名
+    SITETITLE : '我就是爱买', // 站点名称
+    SITEDOMAIN : 'http://www.wjsam.com', // 站点域名
     SITEICP : '1-2', // 站点备案号
     SYSTEMMAIL : 'doramart@qq.com', // 管理员个人邮箱
     UPDATEFOLDER : process.cwd()+'/public/upload', // 默认上传文件夹本地路径
