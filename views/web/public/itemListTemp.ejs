@@ -1,37 +1,42 @@
 <% if (documentList.length) { %>
 <% documentList.forEach(function(item){ %>
-<article class="post">
-    <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="blog-list-item">
-            <div class="item-Img">
-                <a target="_blank" href="/detail/<%= item._id %>.html">
-                    <img class="img-responsive" alt="<%= item.title %>" src="<%= item.thumbSrc %>"></a>
-            </div>
-            <div class="item-des">
-                <a href="###" target="_blank" class="item-title"><%= item.title %></a>
+<div class="row">
+    <div class="col-md-12">
+        <a href="###" target="_blank" class="item-title"><%= item.title %></a>
+        <%= item.price %>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <div class="item-Img">
+            <a target="_blank" href="/detail/<%= item._id %>.html">
+                <img class="img-responsive" alt="<%= item.title %>" src="<%= item.thumbSrc %>"></a>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="item-des">
 
-                <div class="item-time">
-                    <span><i class="icon-time"></i><a><%= item.gmtCreated %></a></span>
-                </div>
-                <div class="item-time">
-                    <span>标签：<%= item.tags %></span>
-                </div>
-                <div class="summary"><%= item.detail %></div>
+
+            <div class="item-time">
+                <span><i class="icon-time"></i><a><%= item.gmtCreated %></a></span>
             </div>
-            <div class="item-more">
-                <span><i class="icon-eye-open"></i><a>163</a></span>
-                <span><i class="icon-comment"></i><a>33</a></span>
-                <span><i class="icon-heart"></i><a>2</a></span>
+            <div class="item-time">
+                <span>标签：<%= item.tags %></span>
+            </div>
+            <div class="summary"><%= item.detail %></div>
+        </div>
+        <div class="item-more">
+            <span><i class="icon-eye-open"></i><a>163</a></span>
+            <span><i class="icon-comment"></i><a>33</a></span>
+            <span><i class="icon-heart"></i><a>2</a></span>
 
                     <span class="glyphicon glyphicon-flag" title="列表推荐">
                         <%= item.from %>
-                        <a href="<%= item.buyUrl %>" target="_blank" class="btn-buy" rel="nofollow" style="text-align: center" _hover-ignore="1">直达链接 &gt;</a>
-
+                        <a href="<%= item.buyUrl %>" target="_blank" class="btn-buy" rel="nofollow"
+                           style="text-align: center" _hover-ignore="1">直达链接 &gt;</a>
                     </span>
-            </div>
-            <div class="clearfix"></div>
         </div>
     </div>
-</article>
+</div>
 <% }); %>
 <% } %>
