@@ -11,12 +11,14 @@
     <title><%=siteConfig.title%></title>
 
     <!-- Bootstrap core CSS -->
-    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-
     <link href="/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <script src="/components/angular/angular.min.js"></script>
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+    <script src="/js/ng-infinite-scroll.min.js"></script>
+
+    <!--<script src="/components/angular-masonry/angular-masonry.js"></script>-->
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
@@ -37,7 +39,7 @@
     </script>
 </head>
 
-<body ng-app="webApp">
+<body ng-app="indexApp">
 <%- include header %>
 
 <div class="container-fluid">
@@ -53,4 +55,5 @@
 </div>
 <!-- BEGIN FOOTER -->
 <%- include footer %>
+
 

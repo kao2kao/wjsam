@@ -99,8 +99,6 @@ function parseHtml(innerHtml, product) {
         console.error(innerHtml);
         console.error(e);
     }
-
-
 }
 
 /**
@@ -151,7 +149,6 @@ function parseDetail(detailUrl, product) {
         try {
             var $ = cheerio.load(escaper.unescape(detailHtml));
             //var detailHtml = escaper.unescape(detailHtml);
-
             //详情信息要有优惠力度，商品介绍
             var detail = $('div[class=inner-block]').text();
 

@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
+var Product = require("../models/Product");
 //数据库操作对象
 var DbOpt = require("../models/DbOpt");
 //站点配置
@@ -16,6 +17,27 @@ var url = require('url');
 router.get('/', function (req, res, next) {
     res.render('web/index', siteFunc.setDataForIndex(req, res, {'type': 'content'}, '首页'));
 
+});
+
+//对象列表查询
+router.get('/getProductList', function (req, res, next) {
+    //var currentPage = req.params.defaultUrl;
+    var params = url.parse(req.url, true);
+    var keywords = params.query.searchKey;
+    var keyPr = [];
+    var callback = params.query.callback;
+    if (keywords) {
+        var reKey = new RegExp(keywords, 'i');
+    }
+
+
+    res.json(DbOpt.getPaginationResult(Product, req, res,{}));
+    /*if (params.query &&params.query.callback) {
+        var str=params.query.callback + '(' + JSON.stringify(list) + ')';//jsonp
+        res.end(str);
+    }else {
+        res.end(JSON.stringify(list));//普通的json
+    }*/
 });
 
 module.exports = router;

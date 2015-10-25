@@ -5,6 +5,7 @@
   "main": "main.js",
   "dependencies": {
     "aliyun-sdk": "^1.6.0",
+    "angular-masonry": "^0.13.0",
     "archiver": "^0.15.1",
     "body-parser": "~1.13.2",
     "bower": "^1.5.3",

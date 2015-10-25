@@ -24,15 +24,15 @@ module.exports = {
 
     SITETITLE : '我就是爱买', // 站点名称
     SITEDOMAIN : 'http://www.wjsam.com', // 站点域名
-    SITEICP : '1-2', // 站点备案号
-    SYSTEMMAIL : 'doramart@qq.com', // 管理员个人邮箱
+    SITEICP : '京ICP备11035347号-1', // 站点备案号
+    SYSTEMMAIL : '330996818@qq.com', // 管理员个人邮箱
     UPDATEFOLDER : process.cwd()+'/public/upload', // 默认上传文件夹本地路径
     TEMPSFOLDER : process.cwd()+'/views/web/temp', // 默认模板文件夹本地路径
     DATAOPERATION : process.cwd()+'/models/db/bat', //数据库操作脚本目录
     DATABACKFORDER : 'C:/softbak/mongodbConfig/mongodata/', // 服务端数据库操作脚本目录
     CMSDISCRIPTION : '前端开发俱乐部,分享前端知识,丰富前端技能。汇集国内专业的前端开发文档,为推动业内前端开发水平共同奋斗。html,js,css,nodejs,前端开发,jquery,web前端, web前端开发, 前端开发工程师',
-    SITEKEYWORDS : '前端开发俱乐部,前端俱乐部,DoraCMS,内容管理系统, 前端开发, web前端, 前端开发工程师,前端资源, angularjs, 前端开发工具, nodejs ,boostrap',
-    SITEBASICKEYWORDS : '前端开发俱乐部,前端开发,前端俱乐部,DoraCMS', // 基础关键词
+    SITEKEYWORDS : '我就是爱买,值得买,全网折扣,便宜货',
+    SITEBASICKEYWORDS : '我就是爱买,值得买,全网折扣', // 基础关键词
 
 
     SYSTEMMANAGE : new Array('sysTemManage_0','DoraCMS后台管理'),  // 后台模块(系统管理)

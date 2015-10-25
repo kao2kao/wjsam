@@ -89,12 +89,12 @@ var siteFunc = {
         var documentList = DbOpt.getPaginationResult(Product, req, res, {});
         return {
             siteConfig: siteFunc.siteInfos("首页"),
-            documentList: documentList.docs,
+            //documentList: documentList.docs,
             //hotItemListData: siteFunc.getHotItemListData({}),
             //friendLinkData: siteFunc.getFriendLink(),
            // cateTypes: siteFunc.getCategoryList(),
             cateInfo: '',
-            pageInfo: documentList.pageInfo,
+            //pageInfo: documentList.pageInfo,
             pageType: 'index',
             logined: isLogined(req),
             layout: 'web/public/defaultTemp'

@@ -9,8 +9,8 @@ var mongoose = require('mongoose');
 var settings = require("../models/common/settings");
 
 var dbURL = 'mongodb://115.29.44.230:27017/admin';
-var dbOptions = {'user':'kaokao','pass':'kao123456kao'};
-var db = mongoose.connect(dbURL,dbOptions);
+var dbOptions = {'user': 'kaokao', 'pass': 'kao123456kao'};
+var db = mongoose.connect(dbURL, dbOptions);
 
 //信息删除操作
 var DbOpt = {
@@ -68,7 +68,7 @@ var DbOpt = {
         res.end("success");
     },
 
-    pagination: function (obj, req, res, conditions) {
+    pagination: function (obj, req, res, conditions, callback) {
 
         var params = url.parse(req.url, true);
         var startNum = (params.query.currentPage - 1) * params.query.limit + 1;
@@ -101,10 +101,10 @@ var DbOpt = {
                     "startNum": Number(startNum)
                 };
 
-                return res.json({
-                    docs: docs.slice(startNum - 1, startNum + limit - 1),
-                    pageInfo: pageInfo
-                });
+                return callback + "(" + res.json({
+                        docs: docs.slice(startNum - 1, startNum + limit - 1),
+                        pageInfo: pageInfo
+                    }) + ")";
             }
         })
     },
@@ -149,6 +149,7 @@ var DbOpt = {
             docs: resultList,
             pageInfo: pageInfo
         };
+
         return datasInfo;
     },
 
