@@ -51,3 +51,35 @@
   border-left-style: solid;
   border-left-width: 1px;
 }
+
+.itemName{
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: normal;
+  padding-left: 42px;
+}
+.price {
+  color: #b00;
+}
+ .icon {
+  color: #fff;
+  background-color: #f04848;
+}
+
+.icon {
+  display: block;
+  width: 32px;
+  height: 20px;
+  float: left;
+  font-size: 12px;
+  color: #f04848;
+  background-color: #f5f5f5;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center;
+  line-height: 20px;
+  margin: 4px 10px 0 0;
+}
