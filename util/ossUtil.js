@@ -17,7 +17,8 @@ var OssUtil = function () {
 };
 
 OssUtil.prototype.putFile = function (imgSrc, fileName, callback) {
-    var bucketName = moment().format("YYYYMMDD");
+    var bucketName = "wjsam";
+/*
     oss.createBucket({
         Bucket: bucketName,
         ACL: 'public-read',
@@ -31,6 +32,7 @@ OssUtil.prototype.putFile = function (imgSrc, fileName, callback) {
         }
         console.log('success:', data);
     });
+*/
 
     var rq = request(imgSrc).pipe(fs.createWriteStream(fileName));
     rq.on('finish', function (err) {

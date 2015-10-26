@@ -1,5 +1,4 @@
 .btn-buy{
-
   background-color: rgb(240, 72, 72);
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -33,4 +32,22 @@
   width: 130px;
   height: 65px;
   display: block;
+}
+
+.ninePicBox{
+  display: block;
+  overflow: hidden;
+  border: 1px solid #dcdcdc;
+  border-top-color: rgb(220, 220, 220);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-right-color: rgb(220, 220, 220);
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-bottom-color: rgb(220, 220, 220);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-left-color: rgb(220, 220, 220);
+  border-left-style: solid;
+  border-left-width: 1px;
 }
