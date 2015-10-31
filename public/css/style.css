@@ -28,15 +28,16 @@
   border-bottom-style: solid;
   border-bottom-color: rgb(220, 220, 220);
 }
-.storeLogo img {
-  width: 130px;
-  height: 65px;
+.table img {
+  width: 56px;
+  height: 30px;
   display: block;
 }
 
 .ninePicBox{
   display: block;
   overflow: hidden;
+  width: 150px;
   border: 1px solid #dcdcdc;
   border-top-color: rgb(220, 220, 220);
   border-top-style: solid;
@@ -82,4 +83,10 @@
   text-align: center;
   line-height: 20px;
   margin: 4px 10px 0 0;
+}
+
+.table-bordered i {
+  margin-right: 5px;
+  vertical-align: sub;
+  color: #ffa09b;
 }

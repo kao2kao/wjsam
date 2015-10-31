@@ -61,6 +61,7 @@ function parseHtml(innerHtml, product) {
         var $ = cheerio.load(innerHtml);
         var title = $('div[class=listTitle]').children('h4').children('a')[0]['children'][0].data
         product["title"] = title;
+
         var price = $('div[class=listTitle]').children('h4').children('a').children('span').text();
         product["price"] = price;
         var publishData = $('div[class=listRight]').children('div').children('span')[0]['children'][0].data;

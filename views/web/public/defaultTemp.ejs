@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<%=siteConfig.cmsDescription%>">
     <meta content="<%=siteConfig.keywords%>" name="keywords" />
-    <meta name="author" content="DoraCMS">
+    <meta name="author" content="kaokao">
     <title><%=siteConfig.title%></title>
 
     <!-- Bootstrap core CSS -->
@@ -17,6 +17,13 @@
     <script src="/components/angular/angular.min.js"></script>
     <script src="/components/jquery/dist/jquery.min.js"></script>
     <script src="/js/ng-infinite-scroll.min.js"></script>
+
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/lanrenzhijia.css" type="text/css">
+    <link rel="stylesheet" href="css/icon.css" type="text/css">
+    <script src="js/lanrenzhijia.js"></script>
+
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
@@ -40,7 +47,7 @@
 <body ng-app="indexApp">
 <%- include header %>
 
-<div class="container-fluid">
+<div class="container">
     <div class="row">
         <div class="col-md-8">
             <%-body %>
