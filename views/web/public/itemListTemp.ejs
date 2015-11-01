@@ -1,6 +1,6 @@
 <div ng-controller='PostListController'>
-    <div infinite-scroll='demo.nextPage()' infinite-scroll-disabled='demo.busy' infinite-scroll-distance='1'>
-        <div ng-repeat='item in demo.items'>
+    <div infinite-scroll='products.nextPage()' infinite-scroll-disabled='products.busy' infinite-scroll-distance='1'>
+        <div ng-repeat='item in products.items'>
             <div class="blog-list-item">
                 <div class="row">
                     <div class="itemName col-md-12">
@@ -19,14 +19,11 @@
                     <div class="col-md-9">
                         <div class="item-des">
                             <div class="item-time">
-                                <span><i class="icon-time"></i><a>{{ item.gmtCreated | date:'yyyy-MM-dd HH:mm:ss' }}</a></span>
-                            </div>
-                            <div class="item-time">
-                           <span>标签：
-                               <a href="#" ng-repeat='tag in item.tags'>
-                                   {{tag + '  '}}
-                               </a>
+                               <span>标签：<a href="#" ng-repeat='tag in item.tags'>
+                                       {{tag + ' '}}
+                                   </a>
                             </span>
+                                <span><i class="icon-time"></i><a>{{ item.gmtCreated | date:'yyyy-MM-dd HH:mm:ss' }}</a></span>
                             </div>
                             <div class="summary">{{item.detail}}</div>
                         </div>
@@ -37,7 +34,7 @@
 
                     <span class="glyphicon glyphicon-flag" title="列表推荐">
                         {{item.from}}
-                        <a href="{{item.buyUrl}}" target="_blank" class="btn-buy" rel="nofollow"
+                        <a href="/url/{{item._id}}.html" target="_blank" class="btn-buy" rel="nofollow"
                            style="text-align: center" _hover-ignore="1">直达链接 &gt;</a>
                     </span>
                         </div>
@@ -45,7 +42,7 @@
                 </div>
             </div>
         </div>
-        <div ng-show='demo.busy'>Loading data...</div>
+        <div ng-show='products.busy'>Loading data...</div>
     </div>
 </div>
 
@@ -54,23 +51,27 @@
     var indexAppModule = angular.module('indexApp', ['infinite-scroll']);
 
     indexAppModule.controller('PostListController',
-            function ($scope, Demo) {
-                $scope.demo = new Demo();
+            function ($scope, Products) {
+                $scope.products = new Products();
             });
 
     // 创建后台数据交互工厂
-    indexAppModule.factory('Demo', function ($http) {
-        var Demo = function () {
+    indexAppModule.factory('Products', function ($http) {
+        var Products = function () {
             this.items = [];
             this.busy = false;
             this.after = '';
             this.page = 0;
         };
 
-        Demo.prototype.nextPage = function () {
+        Products.prototype.nextPage = function () {
             if (this.busy) return;
             this.busy = true;
 
+            if (this.page > 2) {
+                this.busy = false;
+                return;
+            }
             var url = "/getProductList?callback=JSON_CALLBACK&limit=20&currentPage=" + this.page;
             $http.get(url).success(function (data) {
                 var items = data["docs"];
@@ -82,7 +83,7 @@
                 this.page += 1;
             }.bind(this));
         };
-        return Demo;
+        return Products;
     });
 </script>
 

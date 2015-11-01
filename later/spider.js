@@ -114,7 +114,7 @@ function parseBuyUrl(directUrl, product) {
                 var evalString = directContent.substring(directContent.lastIndexOf("eval(function"), directContent.lastIndexOf("</script>"));
                 evalString = evalString.replace(/^eval/, '');
                 var unpacked = eval(evalString).toString();
-                var buyUrl = unpacked.substring(unpacked.lastIndexOf("smzdmhref") + 11, unpacked.lastIndexOf("ga("));
+                var buyUrl = unpacked.substring(unpacked.lastIndexOf("smzdmhref") + 11, unpacked.lastIndexOf("ga(")-2);
                 logger.info(buyUrl);
                 product["buyUrl"] = buyUrl;
 

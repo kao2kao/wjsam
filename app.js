@@ -55,9 +55,9 @@ exports.logger = function (name) {
 // 加载路由控制
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var movie = require('./routes/movie');
 var spider = require('./later/spider');
 var detail = require('./routes/detail');
+var url = require('./routes/url');
 
 //加载定时任务
 require('./later/task');
@@ -102,6 +102,7 @@ app.use(session({
 app.use('/', routes);
 app.use('/users', users);
 app.use('/detail', detail);
+app.use('/url', url);
 app.get('/spider', spider.add);//增加;
 
 /*
@@ -133,8 +134,6 @@ app.use(function(req, res, next) {
     console.log(err);
     res.render('web/public/do404', siteFunc.setDataForError(req, res, '找不到页面' ,err.message));
 });
-
-// error handlers
 
 // development error handler
 // will print stacktrace
