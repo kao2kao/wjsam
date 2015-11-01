@@ -37,8 +37,11 @@ router.get('/:url', function (req, res, next) {
                                     console.log(apiUrl);
                                     request({url: apiUrl}, function (error, response, body) {
                                         if (!error) {
-                                            console.log(body);
-                                            res.redirect(result.buyUrl.replace("';", ''));
+                                            var obj = JSON.parse(body)
+                                            var resultString = obj["jingdong_service_promotion_getcode_responce"]["queryjs_result"];
+                                            var result = JSON.parse(resultString);
+                                            var url = result["url"];
+                                            res.redirect(url);
                                         }
                                     });
                                 }
