@@ -15,7 +15,7 @@ var url = require('url');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('web/index', siteFunc.setDataForIndex(req, res, {'type': 'content'}, 'Ê×Ò³'));
+    res.render('sam/index', siteFunc.setDataForIndex(req, res, {'type': 'content'}, 'Ê×Ò³'));
 
 });
 

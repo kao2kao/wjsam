@@ -97,7 +97,7 @@ var siteFunc = {
             //pageInfo: documentList.pageInfo,
             pageType: 'index',
             logined: isLogined(req),
-            layout: 'web/public/defaultTemp'
+            //layout: 'web/public/defaultTemp'
         }
     },
 

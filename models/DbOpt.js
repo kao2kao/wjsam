@@ -8,9 +8,11 @@ var mongoose = require('mongoose');
 //站点配置
 var settings = require("../models/common/settings");
 
-var dbURL = 'mongodb://115.29.44.230:27017/admin';
-var dbOptions = {'user': 'kaokao', 'pass': 'kao123456kao'};
-var db = mongoose.connect(dbURL, dbOptions);
+//var dbURL = 'mongodb://115.29.44.230:27017/admin';
+var dbURL = 'mongodb://localhost:27017/wjsam';
+var db = mongoose.connect(dbURL);
+//var dbOptions = {'user': 'kaokao', 'pass': 'kao123456kao'};
+//var db = mongoose.connect(dbURL, dbOptions);
 
 //信息删除操作
 var DbOpt = {

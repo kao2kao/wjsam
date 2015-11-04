@@ -1,3 +1,50 @@
+<% if (documentList.length) { %>
+<% documentList.forEach(function(item){ %>
+
+<div class="blog-list-item">
+    <div class="row">
+        <div class="itemName col-md-12">
+            <a href="#" class="icon" _hover-ignore="1">优惠</a>
+            <a href="/detail/<%= item._id %>.html" target="_blank" class="item-title"><%= item.title %></a>
+            <span class="price"><%= item.price %></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="item-Img">
+                <a target="_blank" href="/detail/<%= item._id %>.html">
+                    <img class="img-responsive" alt="<%= item.title %>" src="<%= item.thumbSrc %>"></a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="item-des">
+                <div class="item-time">
+                    <span><i class="icon-time"></i><a><%= item.gmtCreated %></a></span>
+                </div>
+                <div class="item-time">
+                    <span>标签：<%= item.tags %></span>
+                </div>
+                <div class="summary"><%= item.detail %></div>
+            </div>
+            <div class="item-more">
+                <span><i class="icon-eye-open"></i><a>163</a></span>
+                <span><i class="icon-comment"></i><a>33</a></span>
+                <span><i class="icon-heart"></i><a>2</a></span>
+
+                    <span class="glyphicon glyphicon-flag" title="列表推荐">
+                        <%= item.from %>
+                        <a href="<%= item.buyUrl %>" target="_blank" class="btn-buy" rel="nofollow"
+                           style="text-align: center" _hover-ignore="1">直达链接 &gt;</a>
+                    </span>
+            </div>
+        </div>
+    </div>
+</div>
+<% }); %>
+<% } %>
+
+
+
 <div ng-controller='PostListController'>
     <div infinite-scroll='products.nextPage()' infinite-scroll-disabled='products.busy' infinite-scroll-distance='1'>
         <div ng-repeat='item in products.items'>
@@ -68,8 +115,10 @@
             if (this.busy) return;
             this.busy = true;
 
-            if (this.page > 2) {
+
+            if (this.page > 5 || this.page<=1) {
                 this.busy = false;
+                this.page += 1;
                 return;
             }
             var url = "/getProductList?callback=JSON_CALLBACK&limit=20&currentPage=" + this.page;
