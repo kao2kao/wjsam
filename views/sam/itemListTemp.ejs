@@ -1,0 +1,84 @@
+<div ng-controller='PostListController'>
+    <div infinite-scroll='products.nextPage()' infinite-scroll-disabled='products.busy' infinite-scroll-distance='1'>
+        <div ng-repeat='item in products.items'>
+
+            <div class="zhi_list cf">
+                <div class="list_pic fl">
+                    <a target="_blank" href="/detail/{{item._id}}.html"><img
+                                src="{{item.thumbSrc}}"
+                                alt="">
+                    </a>
+                </div>
+                <div class="list_info fl">
+                    <p class="list_tit"><a target="_blank" href="/detail/{{item._id}}.html">{{item.title}} </a></p>
+
+                    <p class="list_price"><a target="_blank" href="/detail/{{item._id}}.html">{{item.price}}</a>
+                    </p>
+
+                    <div class="list_doc">
+                        {{item.detail}}
+                    </div>
+                    <div class="list_action">
+                        <p class="list_label">
+                            <a href="http://www.liuzhuni.com/0-3-0-0-0/">{{item.from}}</a><a target="_blank"
+                                                                                             href="http://www.liuzhuni.com/detail/49126.html#comment">评论2</a>
+                        </p>
+
+                        <p class="list_page">
+                            <span class="pub_time"><i class="ico_clock"></i>今天 19:53</span>
+                            <span class="page_num">326人已浏览</span>
+                        </p>
+                        <a target="_blank" class="list_buy_btn" href="/url/{{item._id}}.html"><span>前往购买</span></a>
+                    </div>
+                </div>
+                <div class="tab_tips">
+                </div>
+            </div>
+
+            <div ng-show='products.busy'>Loading data...</div>
+        </div>
+    </div>
+</div>
+<script>
+    var indexAppModule = angular.module('indexApp', ['infinite-scroll']);
+
+    indexAppModule.controller('PostListController',
+            function ($scope, Products) {
+                $scope.products = new Products();
+            });
+
+    // 创建后台数据交互工厂
+    indexAppModule.factory('Products', function ($http) {
+        var Products = function () {
+            this.items = [];
+            this.busy = false;
+            this.after = '';
+            this.page = 0;
+        };
+
+        Products.prototype.nextPage = function () {
+            if (this.busy) return;
+            this.busy = true;
+
+
+            if (this.page > 5 || this.page <= 1) {
+                this.busy = false;
+                this.page += 1;
+                return;
+            }
+            var url = "/getProductList?callback=JSON_CALLBACK&limit=20&currentPage=" + this.page;
+            $http.get(url).success(function (data) {
+                var items = data["docs"];
+                for (var i = 0; i < items.length; i++) {
+                    this.items.push(items[i]);
+                }
+                this.after = "t3_" + this.items[this.items.length - 1]._id;
+                this.busy = false;
+                this.page += 1;
+            }.bind(this));
+        };
+        return Products;
+    });
+</script>
+
+
