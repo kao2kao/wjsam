@@ -29,10 +29,6 @@ router.get('/:url', function (req, res, next) {
                                 if (!error) {
                                     // var reqPath = ‌‌response.req.path;
                                     htmlPath = response.req.path.substring(response.req.path.lastIndexOf("item/") + 5, response.req.path.lastIndexOf("?"));
-
-                                    /*                   var apiUrl = "http://api.jd.com/routerjson?v=2.0&method=jingdong.service.promotion.getcode&app_key=F4E5957B666A592AF051BDADD68960E1&access_token=cb596fb2-2032-4f11-96f5-cf423e79c0a0&360buy_param_json={\"promotionType\":\"7\",\"materialId\":\"http://item.jd.com/" +
-                                     htmlPath + "\",\"unionId\":\"340892107\",\"subUnionId\":\"\",\"siteSize\":\"\",\"siteId\":\"\",\"channel\":\"PC\",\"webId\":\"344975369\",\"extendId\":\"\",\"ext1\":\"\"}&timestamp=" + moment().format('YYYY-MM-DD HH:mm:ss') + "&sign=803BC3B7A2A6DE513DF86A0DAAA63FFF";
-                                     */
                                     apiUrl = getJDApiUrl(htmlPath);
                                     console.log(apiUrl);
                                     request({url: apiUrl}, function (error, response, body) {
@@ -49,8 +45,12 @@ router.get('/:url', function (req, res, next) {
                         }
                     });
                 }
+                else if (result.from == '苏宁') {
+                    res.redirect(result.buyUrl.replace("';", '').replace("4410", '13055809').replace("4303", '0').replace("adBookId=4908", 'adBookId=0').replace("channel=24", 'channel=14'));
+                }
                 else {
                     res.redirect(result.buyUrl.replace("';", ''));
+
                 }
 
             }
