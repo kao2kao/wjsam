@@ -21,7 +21,7 @@ router.get('/', function (req, res, next) {
 
 //对象列表查询
 router.get('/getProductList', function (req, res, next) {
-    //var currentPage = req.params.defaultUrl;
+    //var currentPage = req.params.currentPage;
     var params = url.parse(req.url, true);
     var keywords = params.query.searchKey;
     var keyPr = [];

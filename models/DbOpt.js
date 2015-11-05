@@ -9,6 +9,8 @@ var mongoose = require('mongoose');
 var settings = require("../models/common/settings");
 
 var dbURL = 'mongodb://115.29.44.230:27017/admin';
+//var dbURL = 'mongodb://localhost:27017/wjsam';
+//var db = mongoose.connect(dbURL);
 var dbOptions = {'user': 'kaokao', 'pass': 'kao123456kao'};
 var db = mongoose.connect(dbURL, dbOptions);
 
@@ -112,7 +114,7 @@ var DbOpt = {
 
     getPaginationResult: function (obj, req, res, q, filed) {// 通用查询，带分页，注意参数传递格式,filed为指定字段
         var searchKey = req.query.searchKey;
-        var page = parseInt(req.query.page);
+        var page = parseInt(req.query.currentPage);
         var limit = parseInt(req.query.limit);
         if (!page) page = 1;
         if (!limit) limit = 15;
