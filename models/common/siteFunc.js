@@ -79,36 +79,24 @@ var siteFunc = {
     getNewItemListData : function(q){
         return Content.find(q, 'stitle').sort({'date': -1}).skip(0).limit(10);
     },
-
-   /* getFriendLink: function () {
-        return Ads.find({'category': 'friendlink'});
-    },*/
-
     setDataForIndex: function (req, res, q, title) {
-        //var requireField = 'title date commentNum discription sImg';
         var documentList = DbOpt.getPaginationResult(Product, req, res, {});
         return {
             siteConfig: siteFunc.siteInfos("首页"),
             //documentList: documentList.docs,
-            //hotItemListData: siteFunc.getHotItemListData({}),
-            //friendLinkData: siteFunc.getFriendLink(),
-           // cateTypes: siteFunc.getCategoryList(),
             cateInfo: '',
-            //pageInfo: documentList.pageInfo,
             pageType: 'index',
             logined: isLogined(req),
-            //layout: 'web/public/defaultTemp'
+            layout: 'sam/main'
         }
     },
-
-
     setDetailInfo: function (req, res, product) {
         return {
             siteConfig: siteFunc.siteInfos(product.title, product.detail, product.tags),
             productInfo: product,
             pageType: 'detail',
             logined: isLogined(req),
-            layout: 'web/public/defaultTemp'
+            layout: 'sam/main'
         }
     },
 

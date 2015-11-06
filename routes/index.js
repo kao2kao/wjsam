@@ -16,7 +16,6 @@ var url = require('url');
 /* GET home page. */
 router.get('/', function (req, res, next) {
     res.render('sam/index', siteFunc.setDataForIndex(req, res, {'type': 'content'}, '首页'));
-
 });
 
 //对象列表查询
@@ -29,15 +28,7 @@ router.get('/getProductList', function (req, res, next) {
     if (keywords) {
         var reKey = new RegExp(keywords, 'i');
     }
-
-
     res.json(DbOpt.getPaginationResult(Product, req, res,{}));
-    /*if (params.query &&params.query.callback) {
-        var str=params.query.callback + '(' + JSON.stringify(list) + ')';//jsonp
-        res.end(str);
-    }else {
-        res.end(JSON.stringify(list));//普通的json
-    }*/
 });
 
 module.exports = router;

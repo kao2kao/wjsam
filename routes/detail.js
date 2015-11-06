@@ -29,7 +29,7 @@ router.get('/:url', function (req, res, next) {
                     var cateQuery = {'sortPath': { $regex: new RegExp(cateParentId, 'i') }};
                     res.render('web/temp/' + result.contentTemp + '/detail', siteFunc.setDetailInfo(req, res, cateQuery, result));
                 })*/
-                res.render('web/detail', siteFunc.setDetailInfo(req, res, result));
+                res.render('sam/detail', siteFunc.setDetailInfo(req, res, result));
             } else {
                 res.render('web/public/do404', { siteConfig: siteFunc.siteInfos("²Ù×÷Ê§°Ü")});
             }

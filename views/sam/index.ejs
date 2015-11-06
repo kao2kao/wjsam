@@ -1,197 +1,45 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0024)http://www.wjsam.com/ -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>wjsam</title>
-    <meta name="Description" content="">
-    <meta name="Keywords" content="">
-
-    <meta property="og:type" content="webpage">
-    <meta property="og:url" content="/">
-    <meta property="og:title" content="">
-    <meta property="og:image" content="">
-
-    <link rel="stylesheet" type="text/css" href="./css/global.css">
-    <link rel="stylesheet" type="text/css" href="./css/base.css">
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript">
-        // 适配到移动设备
-        var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito", "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
-        var browser = navigator.userAgent.toLowerCase();
-        var isMobile = false;
-
-        for (var i = 0; i < mobileAgent.length; i++) {
-            if (browser.indexOf(mobileAgent[i]) != -1) {
-                isMobile = true;
-                $("#bdtj").remove();
-                var path = location.pathname.toLowerCase();
-                if (path == "/" || path.indexOf("detail/") > 0 || path.indexOf("bdetail/") > 0 || path.indexOf("publish") > 0 || path.indexOf("qingdan") > 0 || path.indexOf("redian") > 0 || path.indexOf("app") > 0) {
-                    location.href = 'http://m.huim.com' + path;
-                }
-                break;
-            }
-        }
-    </script>
-
-
-    <link rel="stylesheet" type="text/css" href="./css/home.css">
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?e9db3ea87c0c407aacb2d81e8ba569c6";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-
-    <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script>
-
-    <script type="text/javascript" src="/components/angular/angular.min.js"></script>
-    <script type="text/javascript" src="/js/ng-infinite-scroll.min.js"></script>
-</head>
-
-<body ng-app="indexApp">
-
-<% include topSiteBar %>
-<% include header %>
-
-<!-- 主内容 -->
-<div class="container">
-    <!-- 轮播图 -->
-    <div class="slider">
-        <ul id="banner_list" class="banner">
-            <li style="z-index: 1; opacity: 1; background: url(/images/14466087657007.png) 50% 50% no-repeat;">
-                <a target="_blank" class="banner_pic" href="http://www.wjsam.com/ActivityGo/24"></a></li>
-            <li style="z-index: 0; opacity: 0; background: url(/images/14464583976763.png) 50% 50% no-repeat;">
-                <a target="_blank" class="banner_pic" href="http://www.wjsam.com/ActivityGo/6"></a></li>
-        </ul>
-    </div>
-    <!-- 轮播图 end -->
-
-    <div class="grid_auto banner_layer">
-        <div class="adtype"><a class="current"></a><a class=""></a></div>
-        <div class="banner_arrow" data-banner="arrow">
-            <a href="javascript:;" class="arrow_prev" data-arrow="prev"><i></i></a>
-            <a href="javascript:;" class="arrow_next" data-arrow="next"><i></i></a>
-        </div>
-
-    </div>
-
-
-    <div class="grid_auto content_container">
-        <!-- 主推荐 -->
-        <div class="recommend cf">
-            <div class="rec_horm fl">
-                <i class="ico_horm"></i>
-                主编推荐
-            </div>
-            <div class="rec_list fl">
-                <ul>
-                    <li><a rel="nofollow" title="亚马逊每日精品Z秒杀" target="_blank"
-                           href="http://www.wjsam.com/ActivityRGo/1">亚马逊每日精品Z秒杀</a></li>
-                    <li><a rel="nofollow" title="每日最强促销盘点有奖" target="_blank"
-                           href="http://www.wjsam.com/ActivityRGo/2">每日最强促销盘点有奖</a></li>
-                    <li><a rel="nofollow" title="天猫双11预售直播" target="_blank"
-                           href="http://www.wjsam.com/ActivityRGo/4">天猫双11预售直播</a></li>
-                    <li><a rel="nofollow" title="天猫双十一券汇总" target="_blank" href="http://www.wjsam.com/ActivityRGo/3">天猫双十一券汇总</a>
-                    </li>
-                    <li><a rel="nofollow" title="每日精选包邮白菜" target="_blank" href="http://www.wjsam.com/ActivityRGo/5">每日精选包邮白菜</a>
-                    </li>
-                    <li><a rel="nofollow" title="必败好货清单精选" target="_blank" href="http://www.wjsam.com/ActivityRGo/6">必败好货清单精选</a>
-                    </li>
-                    <li><a rel="nofollow" title="每周亚马逊特价书" target="_blank" href="http://www.wjsam.com/ActivityRGo/7">每周亚马逊特价书</a>
-                    </li>
-                    <li><a rel="nofollow" title="支付宝口令红包直播" target="_blank"
-                           href="http://www.wjsam.com/ActivityRGo/8">支付宝口令红包直播</a></li>
-                </ul>
-            </div>
-            <div class="rec_push fr">
-                <a target="_blank" href="http://www.wjsam.com/push"><img
-                            src="./images/push_entry.png" alt=""></a>
-            </div>
-        </div>
-        <!-- 主推荐 end-->
-
-        <div class="zhi_tit cf">
-            <h4>每日超值推荐精选</h4>
-
-            <div class="push_voice" lang="0">
-                <a class="ico_voice" title="开启声音提示" href="javascript:;"></a>
-            </div>
-            <div class="show_type">
-                <ul>
-                    <li class="current"><a class="type_list" title="列表模式" href="javascript:;" onclick="setStyle(0)"></a>
-                    </li>
-                    <li><a class="type_grid" title="网格模式" href="javascript:;" onclick="setStyle(1)"></a></li>
-                </ul>
-            </div>
-            <span class="fr">浏览模式</span>
-        </div>
-
-        <!-- 超值精选 -->
-
-        <div id="today_zhi" class="zhi_type cf">
-            <% include itemListTemp %>
-            <% include mainSide %>
-            <% include sideNav %>
-            <!-- 超值精选 end-->
-        </div>
-    </div>
-    <!-- 主内容 end -->
-    <% include topNav %>
-
-    <% include footer %>
-
-    <script type="text/javascript" src="./js/base.js"></script>
-
-    <script type="text/javascript" src="./js/home.js"></script>
-    <div id="layer_box" style="display: block;"><a class="gotop_btn" title="回到顶部" href="javascript:void(0);">回到顶部</a><a
-                class="suggest_btn" target="_blank" href="http://www.wjsam.com/contents/feedback/">意见反馈</a></div>
-
-    <script type="text/javascript" src="./js/setRefreshTime"></script>
-
-    <div style="height:0;overflow:hidden;">
-        <script type="text/javascript"> var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-            document.write(unescape("%3Cspan id='cnzz_stat_icon_1255777601'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255777601' type='text/javascript'%3E%3C/script%3E"));</script>
-    </div>
-
-
-    <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=23260260"></script>
-    <script type="text/javascript">
-        (function (win, doc) {
-            var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0];
-            var uid = "";
-            if (isLogin()) {
-                uid = $("#udate").val() + _user.UserId + $("#udate").attr("lang");
-            }
-            if (!win.alimamatk_show) {
-                s.charset = "gbk";
-                s.async = true;
-                s.src = "http://a.alimama.cn/tkapi.js";
-                h.insertBefore(s, h.firstChild);
-            }
-            var o = {
-                pid: "mm_41207736_11396887_40958751", /*推广单元ID，用于区分不同的推广渠道*/
-                appkey: "23260260", /*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/
-                unid: uid, /*自定义统计字段*/
-                type: "click" /* click 组件的入口标志 （使用click组件必设）*/
-            };
-            win.alimamatk_onload = win.alimamatk_onload || [];
-            win.alimamatk_onload.push(o);
-        })(window, document);
-    </script>
-
-    <script>
-        (function () {
-            var bp = document.createElement('script');
-            bp.src = '//push.zhanzhang.baidu.com/push.js';
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
-    </script>
+<!-- 轮播图 -->
+<div class="slider">
+    <ul id="banner_list" class="banner">
+        <li style="z-index: 1; opacity: 1; background: url(/images/14466087657007.png) 50% 50% no-repeat;">
+            <a target="_blank" class="banner_pic" href="http://www.wjsam.com/ActivityGo/24"></a></li>
+        <li style="z-index: 0; opacity: 0; background: url(/images/14464583976763.png) 50% 50% no-repeat;">
+            <a target="_blank" class="banner_pic" href="http://www.wjsam.com/ActivityGo/6"></a></li>
+    </ul>
 </div>
-</body>
-</html>
+<!-- 轮播图 end -->
+
+<div class="grid_auto banner_layer">
+    <div class="adtype"><a class="current"></a><a class=""></a></div>
+    <div class="banner_arrow" data-banner="arrow">
+        <a href="javascript:;" class="arrow_prev" data-arrow="prev"><i></i></a>
+        <a href="javascript:;" class="arrow_next" data-arrow="next"><i></i></a>
+    </div>
+
+</div>
+
+<div class="grid_auto content_container">
+    <% include recommend %>
+    <div class="zhi_tit cf">
+        <h4>每日超值推荐精选</h4>
+
+        <div class="push_voice" lang="0">
+            <a class="ico_voice" title="开启声音提示" href="javascript:;"></a>
+        </div>
+        <div class="show_type">
+            <ul>
+                <li class="current"><a class="type_list" title="列表模式" href="javascript:;" onclick="setStyle(0)"></a>
+                </li>
+                <li><a class="type_grid" title="网格模式" href="javascript:;" onclick="setStyle(1)"></a></li>
+            </ul>
+        </div>
+        <span class="fr">浏览模式</span>
+    </div>
+    <!-- 超值精选 -->
+    <div id="today_zhi" class="zhi_type cf">
+        <% include itemListTemp %>
+        <% include mainSide %>
+        <% include sideNav %>
+    </div>
+    <!-- 超值精选 end-->
+</div>
