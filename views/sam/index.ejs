@@ -1,19 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0024)http://www.liuzhuni.com/ -->
+<!-- saved from url=(0024)http://www.wjsam.com/ -->
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" xmlns:wb="http://open.weibo.com/wb">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="./js/plugin.js" async="" charset="utf-8" mod_name="tkapi-plugin"></script>
-    <script src="./js/click.js" async="" charset="utf-8" mod_name="tkapi-click"></script>
-    <script src="./js/push.js"></script>
-    <script charset="gbk" async="" src="./js/tkapi.js"></script>
     <title>wjsam</title>
     <meta name="Description" content="">
     <meta name="Keywords" content="">
 
-    <meta property="qc:admins" content="27307131516415205616375">
-    <meta name="baidu-tc-cerfication" content="84369b481e8e17aebd69177321ba1c63">
     <meta property="og:type" content="webpage">
     <meta property="og:url" content="/">
     <meta property="og:title" content="">
@@ -21,7 +15,6 @@
 
     <link rel="stylesheet" type="text/css" href="./css/global.css">
     <link rel="stylesheet" type="text/css" href="./css/base.css">
-    <script type="text/javascript" src="./js/hm.js"></script>
     <script type="text/javascript" src="./js/jquery.min.js"></script>
     <script type="text/javascript">
         // 适配到移动设备
@@ -44,16 +37,16 @@
 
 
     <link rel="stylesheet" type="text/css" href="./css/home.css">
-
-    <script id="bdtj" type="text/javascript">
+    <script>
         var _hmt = _hmt || [];
         (function () {
             var hm = document.createElement("script");
-            hm.src = "//hm.baidu.com/hm.js?d536102a366ddc89e5d17894aed60614";
+            hm.src = "//hm.baidu.com/hm.js?e9db3ea87c0c407aacb2d81e8ba569c6";
             var s = document.getElementsByTagName("script")[0];
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
+
     <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script>
 
     <script type="text/javascript" src="/components/angular/angular.min.js"></script>
@@ -62,201 +55,23 @@
 
 <body ng-app="indexApp">
 
-<!-- 网站顶部 -->
-<div class="top_sitebar">
-    <div class="grid_auto sitebar_container cf">
-        <div class="sitebar_entry fl">
-            <div class="login_before"><a href="javascript:loginShow();">请登录</a><span class="fg_line">|</span><a
-                        target="_blank" href="http://www.liuzhuni.com/reg">注册</a><span class="fg_line">|</span><a
-                        href="http://www.liuzhuni.com/unionlog/qq/"><i class="ico_site ico_sitebar_qq"></i>QQ登录</a></div>
-        </div>
-        <div class="sitebar_topnav fr">
-            <ul>
-                <li><a href="http://www.liuzhuni.com/duihuan/">积分换礼</a><span class="fg_line">|</span></li>
-                <li><a href="http://www.liuzhuni.com/push">订阅推荐</a><span class="fg_line">|</span></li>
-                <li class="topnav_more">
-                    <div class="nav_more">更多<i class="arr_down"></i></div>
-                    <div class="more_list">
-                        <ul>
-                            <li><a href="http://www.liuzhuni.com/dashenping/"><span>大神评</span></a></li>
-                            <li><a href="http://www.liuzhuni.com/mall/"><span>商城导航</span></a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/help/"><span>帮助中心</span></a></li>
-                            <li><a target="_blank" href="http://weibo.com/liuzhunicom"><span>官方微博</span></a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- 网站顶部 end -->
-
-
-<!-- 头部 -->
-<div class="header">
-    <div class="grid_auto header_container cf">
-
-        <a class="site_logo fl" style="width:145px;" href="#"><img src="./images/logo.png" alt="留住你"></a>
-        <a target="_blank" class="site_logo fl" style="width:110px; padding-top:18px; height:36px;"
-           href="http://s.click.taobao.com/npHZqmx"><img src="./images/1111_hblogo.gif" alt=""></a>
-
-        <div class="protection fl">
-            <ul>
-                <li><i class="ico_site ico_pro_1"></i><span>职业买手爆料</span></li>
-                <li><i class="ico_site ico_pro_2"></i><span>中立态度甄选</span></li>
-                <li><i class="ico_site ico_pro_3"></i><span>人工智能推荐</span></li>
-            </ul>
-        </div>
-        <div class="search_area fr">
-            <div class="search_box cf">
-                <form onsubmit="return searchKey($(this))" method="get" action="">
-                <span class="search_input fl">
-                    <input type="text" id="keywords" class="keywords txt_focus" name="s" value="请输入想找的宝贝"
-                           lang="请输入想找的宝贝">
-                </span>
-                    <input type="submit" class="search_submit fl" value="">
-                </form>
-            </div>
-            <p class="hot_key"><a target="_blank" href="http://www.liuzhuni.com/search/?s=%E5%8F%8C11">双11预售</a><span
-                        class="fg_line">|</span><a target="_blank"
-                                                   href="http://www.liuzhuni.com/search/?s=%E7%A5%9E%E4%BB%B7">神价格</a><span
-                        class="fg_line">|</span><a target="_blank"
-                                                   href="http://www.liuzhuni.com/search/?s=%E6%89%8B%E6%85%A2%E6%97%A0">手慢无</a><span
-                        class="fg_line">|</span><a target="_blank"
-                                                   href="http://www.liuzhuni.com/search/?s=%E7%99%BD%E8%8F%9C%E4%BB%B7">白菜价</a><span
-                        class="fg_line">|</span><a target="_blank"
-                                                   href="http://www.liuzhuni.com/search/?s=%E4%BC%98%E6%83%A0%E5%88%B8">优惠券</a>
-            </p>
-        </div>
-    </div>
-    <!-- 导航 -->
-    <div class="site_nav">
-        <div class="grid_auto nav_container">
-            <ul class="navigation fl" id="nav_content">
-                <li><a href="./#" class="current">首页</a></li>
-                <li><a href="http://www.liuzhuni.com/publish/">全民爆料</a></li>
-                <li><a href="http://www.liuzhuni.com/baicai/">极速白菜</a></li>
-                <li><a href="http://www.liuzhuni.com/shaidan/"><img style="vertical-align:middle"
-                                                                    src="./images/nav_sd.gif"></a></li>
-
-                <li><a href="http://www.liuzhuni.com/1111/jiankong/"><em class="ico_site ico_hot"></em>神价监控</a></li>
-                <li><a href="http://www.liuzhuni.com/coupon/">免费领券</a></li>
-                <li><a href="http://www.liuzhuni.com/push/"><em class="ico_site ico_new"></em>手机APP</a></li>
-            </ul>
-            <div class="start_app fr">
-            </div>
-        </div>
-    </div>
-    <script type="text/javascript">
-        // 导航栏当前状态
-        var oNavli = document.getElementById("nav_content").getElementsByTagName("a");
-        for (var i = 0; i < oNavli.length; i++) {
-            var sHref = oNavli[i].getAttribute("href");
-
-            if (sHref.indexOf(location.hostname) != -1) {
-                sHref = sHref.split(location.hostname)[1];
-            }
-            if (sHref == location.pathname.toLowerCase() || sHref == location.pathname.toLowerCase() + "/") {
-                oNavli[i].className = "current";
-                if (location.pathname.toLowerCase() == "/shaidan/") {
-                    oNavli[i].innerHTML = "好货晒单";
-                }
-            }
-        }
-    </script>
-    <!-- 导航 end -->
-</div>
-<!-- 头部 end -->
-
+<% include topSiteBar %>
+<% include header %>
 
 <!-- 主内容 -->
 <div class="container">
     <!-- 轮播图 -->
     <div class="slider">
         <ul id="banner_list" class="banner">
-            <li style="z-index: 1; opacity: 1; background: url(http://i.liuzhuni.com/activity/14465144427000.jpg) 50% 50% no-repeat;">
-                <a target="_blank" class="banner_pic" href="http://www.liuzhuni.com/ActivityGo/24"></a></li>
-            <li style="z-index: 0; opacity: 0; background: url(http://i.liuzhuni.com/activity/14464583976763.png) 50% 50% no-repeat;">
-                <a target="_blank" class="banner_pic" href="http://www.liuzhuni.com/ActivityGo/6"></a></li>
+            <li style="z-index: 1; opacity: 1; background: url(/images/14466087657007.png) 50% 50% no-repeat;">
+                <a target="_blank" class="banner_pic" href="http://www.wjsam.com/ActivityGo/24"></a></li>
+            <li style="z-index: 0; opacity: 0; background: url(/images/14464583976763.png) 50% 50% no-repeat;">
+                <a target="_blank" class="banner_pic" href="http://www.wjsam.com/ActivityGo/6"></a></li>
         </ul>
     </div>
     <!-- 轮播图 end -->
 
     <div class="grid_auto banner_layer">
-        <!-- 签到 -->
-        <div class="sign_in">
-
-            <div class="nosign_box">
-                <a class="sign_btn" href="javascript:void(0);" onclick="signIn();"><i class="sign_date">3</i><span
-                            class="sign_txt">每日签到领积分</span></a>
-
-                <p class="start_sign">您今日尚未签到</p>
-            </div>
-
-            <div class="oksign_box" style="display:none">
-                <div class="sign_success"><i class="sign_date">3</i><span class="sign_txt">签到成功,<a class="daren_sign"
-                                                                                                   href="javascript:;">达人榜</a></span>
-                </div>
-                <p class="start_sign">您已连续签到0天</p>
-
-                <div class="sign_rank">
-                    <i class="rank_angle"></i>
-
-                    <p class="rank_tit">签到达人榜（连续）</p>
-                    <table class="rank_table">
-                        <tbody>
-                        <tr>
-                            <td><span class="sign_day">1</span></td>
-                            <td class="col_td"><img class="col_img" src="./images/13811367035579.jpg" alt=""><span
-                                        class="col_name" title="梦想家黄思聪">梦想家黄思聪</span></td>
-                            <td>734天</td>
-                        </tr>
-                        <tr>
-                            <td><span class="sign_day">2</span></td>
-                            <td class="col_td"><img class="col_img"
-                                                    src="./images/100"
-                                                    alt=""><span class="col_name" title="疯中勿语">疯中勿语</span></td>
-                            <td>734天</td>
-                        </tr>
-                        <tr>
-                            <td><span class="sign_day">3</span></td>
-                            <td class="col_td"><img class="col_img"
-                                                    src="./images/100(1)"
-                                                    alt=""><span class="col_name" title="水分子">水分子</span></td>
-                            <td>718天</td>
-                        </tr>
-                        <tr>
-                            <td><span class="sign_day">4</span></td>
-                            <td class="col_td"><img class="col_img"
-                                                    src="./images/100(2)"
-                                                    alt=""><span class="col_name" title="Gary">Gary</span></td>
-                            <td>625天</td>
-                        </tr>
-                        <tr>
-                            <td><span class="sign_day">5</span></td>
-                            <td class="col_td"><img class="col_img"
-                                                    src="./images/100(3)"
-                                                    alt=""><span class="col_name" title="Cookie餅">Cookie餅</span></td>
-                            <td>433天</td>
-                        </tr>
-                        <tr>
-                            <td><span class="sign_day">6</span></td>
-                            <td class="col_td"><img class="col_img"
-                                                    src="./images/100(4)"
-                                                    alt=""><span class="col_name" title="呀喉?、`">呀喉?、`</span></td>
-                            <td>368天</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="sign_foot">
-                <a target="_blank" class="publish_btn" href="http://www.liuzhuni.com/publish/add">我要爆料</a><a
-                        target="_blank" href="http://www.liuzhuni.com/duihuan/">积分换礼</a>
-            </div>
-        </div>
-        <!-- 签到 end-->
         <div class="adtype"><a class="current"></a><a class=""></a></div>
         <div class="banner_arrow" data-banner="arrow">
             <a href="javascript:;" class="arrow_prev" data-arrow="prev"><i></i></a>
@@ -276,25 +91,25 @@
             <div class="rec_list fl">
                 <ul>
                     <li><a rel="nofollow" title="亚马逊每日精品Z秒杀" target="_blank"
-                           href="http://www.liuzhuni.com/ActivityRGo/1">亚马逊每日精品Z秒杀</a></li>
+                           href="http://www.wjsam.com/ActivityRGo/1">亚马逊每日精品Z秒杀</a></li>
                     <li><a rel="nofollow" title="每日最强促销盘点有奖" target="_blank"
-                           href="http://www.liuzhuni.com/ActivityRGo/2">每日最强促销盘点有奖</a></li>
+                           href="http://www.wjsam.com/ActivityRGo/2">每日最强促销盘点有奖</a></li>
                     <li><a rel="nofollow" title="天猫双11预售直播" target="_blank"
-                           href="http://www.liuzhuni.com/ActivityRGo/4">天猫双11预售直播</a></li>
-                    <li><a rel="nofollow" title="天猫双十一券汇总" target="_blank" href="http://www.liuzhuni.com/ActivityRGo/3">天猫双十一券汇总</a>
+                           href="http://www.wjsam.com/ActivityRGo/4">天猫双11预售直播</a></li>
+                    <li><a rel="nofollow" title="天猫双十一券汇总" target="_blank" href="http://www.wjsam.com/ActivityRGo/3">天猫双十一券汇总</a>
                     </li>
-                    <li><a rel="nofollow" title="每日精选包邮白菜" target="_blank" href="http://www.liuzhuni.com/ActivityRGo/5">每日精选包邮白菜</a>
+                    <li><a rel="nofollow" title="每日精选包邮白菜" target="_blank" href="http://www.wjsam.com/ActivityRGo/5">每日精选包邮白菜</a>
                     </li>
-                    <li><a rel="nofollow" title="必败好货清单精选" target="_blank" href="http://www.liuzhuni.com/ActivityRGo/6">必败好货清单精选</a>
+                    <li><a rel="nofollow" title="必败好货清单精选" target="_blank" href="http://www.wjsam.com/ActivityRGo/6">必败好货清单精选</a>
                     </li>
-                    <li><a rel="nofollow" title="每周亚马逊特价书" target="_blank" href="http://www.liuzhuni.com/ActivityRGo/7">每周亚马逊特价书</a>
+                    <li><a rel="nofollow" title="每周亚马逊特价书" target="_blank" href="http://www.wjsam.com/ActivityRGo/7">每周亚马逊特价书</a>
                     </li>
                     <li><a rel="nofollow" title="支付宝口令红包直播" target="_blank"
-                           href="http://www.liuzhuni.com/ActivityRGo/8">支付宝口令红包直播</a></li>
+                           href="http://www.wjsam.com/ActivityRGo/8">支付宝口令红包直播</a></li>
                 </ul>
             </div>
             <div class="rec_push fr">
-                <a target="_blank" href="http://www.liuzhuni.com/push"><img
+                <a target="_blank" href="http://www.wjsam.com/push"><img
                             src="./images/push_entry.png" alt=""></a>
             </div>
         </div>
@@ -319,829 +134,64 @@
         <!-- 超值精选 -->
 
         <div id="today_zhi" class="zhi_type cf">
-
-            <div class="zhi_container fl">
-
-
-                <div id="ulmain">
-                  <!--  <div class="zhi_list cf">
-                        <div class="list_pic fl">
-                            <a target="_blank" href="http://www.liuzhuni.com/detail/47961.html"><img
-                                        src="./images/14463695918563.jpg!290x290.jpg"
-                                        alt="">
-                            </a>
-
-
-                        </div>
-                        <div class="list_info fl">
-                            <p class="list_tit"><a target="_blank" href="http://www.liuzhuni.com/detail/47961.html"><i
-                                            class="top_ico"></i> 双11必抢# 每天刷天猫最高1111元红包 活动汇总</a></p>
-
-                            <p class="list_price"><a target="_blank" href="http://www.liuzhuni.com/detail/47961.html">(已更新7种,回帖你的红包数)</a>
-                            </p>
-
-                            <div class="list_doc">
-                                <p>
-                                    天猫双11每年都要积累下小红包，届时留住你(惠喵)再为大家推荐下白菜价，下单就0元单啦，本次小编也为大家整理下目前天猫可以获得红包的途径，方便大家进行领取；同时欢迎大家在本文留言你每次获取到了多少红包（<a
-                                            href="http://www.liuzhuni.com/go_buy/47961_7" target="_blank" rel="nofollow"
-                                            data-link="1">点我可查询自己已有多少红包</a>）。</p>
-
-                                <p><strong>1、天猫双11赞助人送你最高1111元红包(<a href="http://www.liuzhuni.com/redian/130.html"
-                                                                    target="_blank" data-link="1">自动化教程</a>)</strong>
-                                </p>
-
-                                <p>(电脑端)<a href="http://www.liuzhuni.com/go_buy/47961_0" target="_blank" rel="nofollow"
-                                           data-link="1">点我领取天猫最高1111元红包&gt;&gt;</a></p>
-
-                                <p>(手机端)<a href="http://www.liuzhuni.com/go_buy/47961_1" target="_blank" rel="nofollow"
-                                           data-link="1">点我领取天猫最高1111元红包&gt;&gt;</a></p>
-
-                                <p>#每天都可以抽，面额有1元、2元、5元、10元、20元、1111元；<strong></strong></p>
-
-                                <p><strong>2、天猫狂欢城玩游戏赢15亿红包</strong></p>
-
-                                <p><a href="http://www.liuzhuni.com/go_buy/47961_3" target="_blank" rel="nofollow"
-                                      data-link="1">点我抽取天猫狂欢城寻宝红包&gt;&gt;</a></p>
-
-                                <p>#每天都可以玩，面额有1元、2元、5元、10元、1111元，还有品牌优惠券；<span></span></p>
-
-                                <p><strong>3、天猫花呗每天整点老虎机赢1111红包(<a href="http://www.liuzhuni.com/detail/48836.html"
-                                                                   target="_blank" rel="nofollow"
-                                                                   data-link="1">自动化教程</a>)</strong></p>
-
-                                <p><a href="http://www.liuzhuni.com/go_buy/47961_4" target="_blank" rel="nofollow"
-                                      data-link="1">点我玩天猫花呗抽红包购物券免息卡&gt;&gt;</a></p>
-
-                                <p>#每个时段都可以抽，面额为：1元、2元、5元、10元、100元、300元、1111元；还有免息券和购物券；<br></p>
-
-                                <p><strong>4、转发新浪微博必中红包最高得1111元</strong></p>
-
-                                <p><a href="http://www.liuzhuni.com/go_buy/47961_5" target="_blank" rel="nofollow"
-                                      data-link="1">点我抽取新浪微博转发抽5次红包&gt;&gt;</a><strong><br></strong></p>
-
-                                <p>#每天有5次机会，一天基本可以中两个，1~2块钱大部分；</p>
-
-                                <p><strong>5、天猫APP扫描双十一LOGO标志抢红包</strong></p>
-
-                                <p><a href="http://www.liuzhuni.com/detail/47061.html" target="_blank" rel="nofollow"
-                                      data-link="1">点我扫天猫111logo赢最高1111元红包&gt;&gt;</a></p>
-
-                                <p>#每天都可以玩，建议每天玩一次，刚小编一次就中了5元；</p>
-
-                                <p><strong>6、阿里旅行1亿红包豪气派发</strong></p>
-
-                                <p><a href="http://www.liuzhuni.com/go_buy/47961_6" target="_blank" rel="nofollow"
-                                      data-link="1">点我抢旅行10/20/100/1111元红包&gt;&gt;</a><strong><br></strong></p>
-
-                                <p>#每天可以玩，10/20旅行红包可以和红包叠加；<br></p>
-
-                                <p><strong>7、UC浏览器刷新闻抢红包</strong></p>
-
-                                <p>#在UC浏览器首屏的新闻里，下拉刷新新闻运气式的会出现红包</p>
-
-                                <p><br></p>
-
-                                <p><span>￥￥￥欢迎在评论留言你抢到了多少红包，也可补充新的红包活动，</span></p>
-
-                                <p>之前的留言送金币活动也将在今日发放到账户。</p>
-
-                                <p><span>天猫APP扫描下单二维码，装惠喵天天掌上抢红包！</span></p>
-
-                                <p><br></p>
-
-                                <p><br></p>
-
-                                <p><a href="http://www.liuzhuni.com/go_buy/47961_2" target="_blank" rel="nofollow"
-                                      data-link="1"></a></p>
-
-                                <p><a href="http://www.liuzhuni.com/detail/47671.html" target="_blank" data-link="1">优惠实时接收群
-                                        5000个名额申请(有红包)</a><br></p>
-                            </div>
-                            <div class="list_action">
-                                <p class="list_label">
-                                    <a href="http://www.liuzhuni.com/0-1-0-0-0/">天猫</a><a target="_blank"
-                                                                                          href="http://www.liuzhuni.com/detail/47961.html#comment">评论3786</a>
-                                </p>
-
-                                <p class="list_page">
-                                    <span class="pub_time"><i class="ico_clock"></i>11月01日 16:48</span>
-                                    <span class="page_num">199299人已浏览</span>
-                                </p>
-                                <a target="_blank" class="list_buy_btn" href="http://www.liuzhuni.com/go/47961"><span>前往购买</span></a>
-                            </div>
-                        </div>
-                        <div class="tab_tips">
-                        </div>
-                    </div>-->
-
-                    <% include itemListTemp %>
-                    <!--<div class="publish_enter enter_area">
-                        <div class="enter_title cf">
-                            <span>全民爆料</span>
-                            <a target="_blank" href="http://www.liuzhuni.com/publish/">查看更多</a>
-                        </div>
-                        <div class="enter_content cf">
-
-                            <div class="pub_big"><a target="_blank"
-                                                    href="http://www.liuzhuni.com/bdetail/336505.html"><img
-                                            src="./images/14465521845510.jpg"
-                                            alt="LAIKA 莱爱家 德国 进口牛奶 低脂牛奶 1Lx12盒 约65元(129，199-100)"><span>64.5元</span></a></div>
-                            <div class="pub_list cf">
-                                <ul>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336498.html"><img
-                                                    src="./images/14465518516137.jpg"
-                                                    alt=""><span>39.00元</span></a></li>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336494.html"><img
-                                                    src="./images/14465517789214.jpg"
-                                                    alt=""><span>19.00元</span></a></li>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336527.html"><img
-                                                    src="./images/14465510574133.jpg"
-                                                    alt=""><span>5249元</span></a></li>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336485.html"><img
-                                                    src="./images/14465509894982.jpg"
-                                                    alt=""><span>24.5元</span></a></li>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336484.html"><img
-                                                    src="./images/14465509214557.jpg"
-                                                    alt=""><span>359.00元</span></a></li>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336524.html"><img
-                                                    src="./images/14465507514392.jpg"
-                                                    alt=""><span>9.90元</span></a></li>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336523.html"><img
-                                                    src="./images/14465507085321.jpg"
-                                                    alt=""><span>4.9元</span></a></li>
-                                    <li><a target="_blank" href="http://www.liuzhuni.com/bdetail/336482.html"><img
-                                                    src="./images/14465461444471.jpg"
-                                                    alt=""><span>19.00元</span></a></li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-                    <div class="baicai_enter enter_area">
-                        <div class="enter_title cf">
-                            <span>极速白菜</span>
-                            <a target="_blank" href="http://www.liuzhuni.com/baicai/">查看更多</a>
-                        </div>
-                        <div class="enter_baicai cf">
-                            <ul>
-                                <li>
-                                    <a target="_blank" href="http://item.taobao.com/item.htm?id=42010677411"
-                                       isconvert="1"><img
-                                                src="./images/14465521799380.jpg"
-                                                alt="玛尚V17无线鼠标">
-
-                                        <p class="bc_tit">玛尚V17无线鼠标</p>
-
-                                        <div class="bc_pricearea cf"><span class="bc_buy">购买</span><span
-                                                    class="bc_jg"><em>￥</em>9.9</span><span class="bc_yj">￥49</span>(2折)
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="http://item.taobao.com/item.htm?id=520899861001"
-                                       isconvert="1"><img
-                                                src="./images/14465406172064.jpg"
-                                                alt="三层颈椎牵引器">
-
-                                        <p class="bc_tit">三层颈椎牵引器</p>
-
-                                        <div class="bc_pricearea cf"><span class="bc_buy">购买</span><span
-                                                    class="bc_jg"><em>￥</em>9.9</span><span class="bc_yj">￥0</span>(0折)
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="http://item.taobao.com/item.htm?id=42057970189"
-                                       isconvert="1"><img
-                                                src="./images/14465405975386.jpg"
-                                                alt="手动豆浆机">
-
-                                        <p class="bc_tit">手动豆浆机</p>
-
-                                        <div class="bc_pricearea cf"><span class="bc_buy">购买</span><span
-                                                    class="bc_jg"><em>￥</em>8.7</span><span class="bc_yj">￥49</span>(1.8折)
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a target="_blank" href="http://item.taobao.com/item.htm?id=522915595907"
-                                       isconvert="1"><img
-                                                src="./images/14465378046667.jpg"
-                                                alt="36/48支装铅笔">
-
-                                        <p class="bc_tit">36/48支装铅笔</p>
-
-                                        <div class="bc_pricearea cf"><span class="bc_buy">购买</span><span
-                                                    class="bc_jg"><em>￥</em>9.8</span><span class="bc_yj">￥27.6</span>(3.6折)
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>-->
-
-                </div>
-
-
-                <div id="site_loading" class="loading_area" style="display:none">
-                    <p><img class="loading-ic"
-                            src="./images/loading.gif" alt="加载">小编为您加载中....
-                    </p>
-                </div>
-                <!-- 分页 -->
-                <div class="site_page">
-                    <!-- 翻页区   -->
-<span class="page_area">
-
-                            <a href="http://www.liuzhuni.com/page/1" class="page_prev" title="上一页"
-                               onclick="getAsynContent($(this));return false;">&lt;</a>
-                            <a href="http://www.liuzhuni.com/page/1"
-                               onclick="getAsynContent($(this));return false;">1</a>
-                            <span class="page_cur">2</span>
-                            <a href="http://www.liuzhuni.com/page/3"
-                               onclick="getAsynContent($(this));return false;">3</a>
-                            <a href="http://www.liuzhuni.com/page/4"
-                               onclick="getAsynContent($(this));return false;">4</a>
-                            <a href="http://www.liuzhuni.com/page/5"
-                               onclick="getAsynContent($(this));return false;">5</a>
-                            <a href="http://www.liuzhuni.com/page/6"
-                               onclick="getAsynContent($(this));return false;">6</a>
-                            <span>....</span>
-                            <a href="http://www.liuzhuni.com/page/3269" onclick="getAsynContent($(this));return false;">3269</a>
-                            <a href="http://www.liuzhuni.com/page/3" class="page_next" title="下一页"
-                               onclick="getAsynContent($(this));return false;">&gt;</a>
-                    </span>
-
-                    <div id="divpageinfo" style="display:none">http://www.liuzhuni.com/page/2</div>
-                    <div id="clspnum" style="display:none">3269</div>
-                </div>
-                <!-- 分布 end-->
-
-            </div>
-
-            <!-- 首页侧边 -->
-            <div class="main_side fr">
-
-
-                <!-- 热门推荐 -->
-                <div class="side_item tj_hot pfixed" _hover-ignore="1" style="top: 55px;">
-                    <div class="side_item_tit">
-                        <i></i>热门推荐
-                    </div>
-                    <div class="side_item_content tj_hot_cot cf">
-                        <ul>
-                            <li>
-                                <a target="_blank" class="tj_hot_img"
-                                   href="http://www.liuzhuni.com/detail/46548.html"><img
-                                            src="./images/14448085106470.png!45x45.jpg"
-                                            alt=""></a>
-
-                                <div class="hot_info">
-                                    <div class="hot_info_tit">
-                                        <a target="_blank" href="http://www.liuzhuni.com/detail/46548.html"
-                                           _hover-ignore="1">天猫双11# 惠喵提前领券 汇总直播 新增 小米旗舰店 50元优惠券</a>
-                                    </div>
-                                    <div class="hot_info_extra">
-                                        <span class="extra_item">浏览<font>284292</font></span>
-                                        <span>评论<font>296</font></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a target="_blank" class="tj_hot_img"
-                                   href="http://www.liuzhuni.com/detail/47961.html"><img
-                                            src="./images/14463695918563.jpg!45x45.jpg"
-                                            alt=""></a>
-
-                                <div class="hot_info">
-                                    <div class="hot_info_tit">
-                                        <a target="_blank" href="http://www.liuzhuni.com/detail/47961.html">双11必抢#
-                                            每天刷天猫最高1111元红包 活动汇总(已更新7种,回帖你的红包数)</a>
-                                    </div>
-                                    <div class="hot_info_extra">
-                                        <span class="extra_item">浏览<font>199246</font></span>
-                                        <span>评论<font>3786</font></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a target="_blank" class="tj_hot_img"
-                                   href="http://www.liuzhuni.com/detail/48772.html"><img
-                                            src="./images/14463427886329.jpg!45x45.jpg"
-                                            alt=""></a>
-
-                                <div class="hot_info">
-                                    <div class="hot_info_tit">
-                                        <a target="_blank" href="http://www.liuzhuni.com/detail/48772.html">天天蚊子肉#
-                                            一起撸支付宝口令红包 11月3日 汇总直播更新(补充有奖)</a>
-                                    </div>
-                                    <div class="hot_info_extra">
-                                        <span class="extra_item">浏览<font>58709</font></span>
-                                        <span>评论<font>168</font></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a target="_blank" class="tj_hot_img"
-                                   href="http://www.liuzhuni.com/detail/48744.html"><img
-                                            src="./images/14463101588208.jpg!45x45.jpg"
-                                            alt=""></a>
-
-                                <div class="hot_info">
-                                    <div class="hot_info_tit">
-                                        <a target="_blank" href="http://www.liuzhuni.com/detail/48744.html">神券降临# 京东双11
-                                            超市嘉年华 199-111神券，新增母婴399-150券</a>
-                                    </div>
-                                    <div class="hot_info_extra">
-                                        <span class="extra_item">浏览<font>56036</font></span>
-                                        <span>评论<font>122</font></span>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <a target="_blank" class="tj_hot_img"
-                                   href="http://www.liuzhuni.com/detail/48821.html"><img
-                                            src="./images/14463556564325.png!45x45.jpg"
-                                            alt=""></a>
-
-                                <div class="hot_info">
-                                    <div class="hot_info_tit">
-                                        <a target="_blank" href="http://www.liuzhuni.com/detail/48821.html">神券答案攻略# 京东
-                                            竞猜赢全品类券 满199-20/满199-50券</a>
-                                    </div>
-                                    <div class="hot_info_extra">
-                                        <span class="extra_item">浏览<font>40623</font></span>
-                                        <span>评论<font>151</font></span>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 热门推荐 end -->
-
-                <!-- 最新爆料 -->
-                <div class="side_item bl_new">
-                    <div class="side_item_tit">
-                        <i></i>最新爆料
-                    </div>
-                    <div class="side_item_content bl_new_cot cf" _hover-ignore="1">
-                        <ul>
-                            <li>
-                                <a target="_blank" class="bl_new_img"
-                                   href="http://www.liuzhuni.com/bdetail/336505.html"><img
-                                            src="./images/14465521845510.jpg!220x220.jpg"
-                                            alt="" _hover-ignore="1"></a>
-                                <span class="bl_new_price">64.5元</span>
-                            </li>
-                            <li>
-                                <a target="_blank" class="bl_new_img"
-                                   href="http://www.liuzhuni.com/bdetail/336527.html"><img
-                                            src="./images/14465510574133.jpg!220x220.jpg"
-                                            alt="" _hover-ignore="1"></a>
-                                <span class="bl_new_price">5249元</span>
-                            </li>
-                            <li>
-                                <a target="_blank" class="bl_new_img"
-                                   href="http://www.liuzhuni.com/bdetail/336524.html"><img
-                                            src="./images/14465507514392.jpg!220x220.jpg"
-                                            alt="" _hover-ignore="1"></a>
-                                <span class="bl_new_price">9.90元</span>
-                            </li>
-                            <li>
-                                <a target="_blank" class="bl_new_img"
-                                   href="http://www.liuzhuni.com/bdetail/336523.html"><img
-                                            src="./images/14465507085321.jpg!220x220.jpg"
-                                            alt=""></a>
-                                <span class="bl_new_price">4.9元</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- 最新爆料 end -->
-
-                <!-- 好货清单 -->
-                <div class="side_item sun_list" _hover-ignore="1">
-                    <div class="side_item_tit">
-                        <i></i>好货清单
-                    </div>
-                    <div class="side_item_content sun_list_cot cf">
-                        <ul>
-                            <li>
-                                <a target="_blank" href="http://www.liuzhuni.com/qingdan/q-482984.html">
-                                    <img src="./images/14464597088217.jpg"
-                                         alt="办公室必备小零食，好吃到停不下来~">
-                                </a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="http://www.liuzhuni.com/qingdan/q-102830.html">
-                                    <img src="./images/14461137024823.jpg"
-                                         alt="万千妈咪推荐，bb尿裤湿巾大集合">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <a target="_blank" class="bc_new_more" href="http://www.liuzhuni.com/qingdan/">查看更多清单</a>
-                </div>
-                <!-- 好货清单 end -->
-
-                <!-- 领券动态 -->
-                <div class="side_item coupon_dyn">
-                    <div class="side_item_tit">
-                        <i></i>领券动态
-                    </div>
-                    <div class="side_item_content coupon_dyn_cot">
-                        <div class="coupon_move">
-                            <div class="coupon_move_inner" style="top: 0px;">
-                                <ul>
-
-
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-hangowa/1816.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/hangowa.gif"
-                                                        width="90" height="45" alt="汉购网"></span>
-                                            <span class="coupon_info">灬***刚刚领取了#双十一#汉购网满3减3优惠券</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-hangowa/1816.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/hangowa.gif"
-                                                        width="90" height="45" alt="汉购网"></span>
-                                            <span class="coupon_info">z***刚刚领取了#双十一#汉购网满3减3优惠券</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-yintai/1824.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/yintai.gif"
-                                                        width="90" height="45" alt="银泰网"></span>
-                                            <span class="coupon_info">梁***刚刚领取了#双十一#银泰网新用户满299减45优惠券</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-jd/1804.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/jd.gif"
-                                                        width="90" height="45" alt="京东"></span>
-                                            <span class="coupon_info">浴***刚刚领取了京东1元礼品卡</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-daling/1840.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/daling.gif"
-                                                        width="90" height="45" alt="达令"></span>
-                                            <span class="coupon_info">₩***刚刚领取了#双十一#达令满99减30优惠券</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-jiae/1806.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/jiae.gif"
-                                                        width="90" height="45" alt="加意新品"></span>
-                                            <span class="coupon_info">J***刚刚领取了#双十一#加意新品满199减100优惠券</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-hangowa/1816.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/hangowa.gif"
-                                                        width="90" height="45" alt="汉购网"></span>
-                                            <span class="coupon_info">狂***刚刚领取了#双十一#汉购网满3减3优惠券</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="http://www.liuzhuni.com/q-daling/1840.html">
-                                            <span class="coupon_mall"><img
-                                                        src="./images/daling.gif"
-                                                        width="90" height="45" alt="达令"></span>
-                                            <span class="coupon_info">王***刚刚领取了#双十一#达令满99减30优惠券</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 领券动态 end -->
-
-                <!-- 最新白菜 -->
-                <div class="side_item bc_new">
-                    <div class="side_item_tit">
-                        <i></i>最新白菜
-                    </div>
-                    <div class="side_item_content bc_new_cot cf">
-                        <ul>
-                            <li>
-                                <a target="_blank" isconvert="1" href="http://item.taobao.com/item.htm?id=42010677411">
-                                    <span class="bc_new_img"><img
-                                                src="./images/14465521799380.jpg"
-                                                width="90" height="45" alt="天猫"></span>
-                                    <span class="bc_new_price">9.9元</span>
-                                </a>
-                                <span class="bc_new_zk">2折</span>
-                            </li>
-                            <li>
-                                <a target="_blank" isconvert="1" href="http://item.taobao.com/item.htm?id=520899861001">
-                                    <span class="bc_new_img"><img
-                                                src="./images/14465406172064.jpg"
-                                                width="90" height="45" alt="天猫"></span>
-                                    <span class="bc_new_price">9.9元</span>
-                                </a>
-                                <span class="bc_new_zk">0折</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <a target="_blank" class="bc_new_more" href="http://www.liuzhuni.com/baicai">查看更多白菜</a>
-                </div>
-                <!-- 最新白菜 end -->
-
-
-            </div>
-            <!-- 首页侧边 end-->
-
-            <!-- 分类导航 -->
-            <div class="side_nav fixed_nav">
-                <ul>
-                    <li class="current">
-                        <a class="nav_type"
-                           href="./images/留住你 _ 发现什么最值得买，精选网购优惠信息，分享超值购，海淘攻略，让你网购更有价值 _ 网购推荐分享第①站.html"
-                           _hover-ignore="1"><i class="ico_class"></i>分类筛选</a>
-                        <ul class="nav_list nav_lei" style="display: none;">
-                            <li class="cur_list"><a
-                                        href="./images/留住你 _ 发现什么最值得买，精选网购优惠信息，分享超值购，海淘攻略，让你网购更有价值 _ 网购推荐分享第①站.html"><i></i>全部推荐</a>
-                            </li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-33-0-0/"><i></i>家居生活</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-86-0-0/"><i></i>食品酒水</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-56-0-0/"><i></i>个护化妆</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-46-0-0/" _hover-ignore="1"><i></i>母婴用品</a>
-                            </li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-113-0-0/"><i></i>服饰鞋帽</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-1-0-0/"><i></i>家用电器</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-57-0-0/"><i></i>手机数码</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-2-0-0/"><i></i>电脑办公</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-145-0-0/"><i></i>图书音像</a></li>
-                            <li><a target="_blank" href="http://www.liuzhuni.com/0-0-a-0-0/"><i></i>其他分类</a></li>
-                        </ul>
-                    </li>
-                    <li class="li_list mall_list">
-                        <span class="mall_pop">商城筛选</span>
-
-                        <div class="mall_box">
-                            <i class="left_arrow"></i>
-                            <ul class="cf">
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-1-0-0-0/">天猫</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-3-0-0-0/">京东商城</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-6-0-0-0/">苏宁易购</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-5-0-0-0/">1号店</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-2-0-0-0/">亚马逊</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-150-0-0-0/">天猫超市</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-8-0-0-0/">国美在线</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-4-0-0-0/">当当网</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-7-0-0-0/">易迅网</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-140-0-0-0/">考拉海淘</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-145-0-0-0/">丰趣海淘</a></li>
-                                <li><a target="_blank" href="http://www.liuzhuni.com/0-56-0-0-0/">健一网</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="li_list">
-                        <a target="_blank" href="http://www.liuzhuni.com/0-0-0-2-0/"><i class="ico_shop"></i>促销活动</a>
-                    </li>
-                    <li class="li_list">
-                        <a target="_blank" href="http://www.liuzhuni.com/0-0-0-3-0/"><i class="ico_shop"></i>优惠券</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- 分类导航 end-->
-
-        </div>
-
-        <!-- 超值精选 end-->
-
-
-    </div>
-</div>
-<!-- 主内容 end -->
-
-
-<!-- topnav -->
-<div class="top_nav" id="fixed_topnav" style="top: 0px;">
-    <div class="grid_auto top_nav_cot cf">
-
-        <a href="./images/留住你 _ 发现什么最值得买，精选网购优惠信息，分享超值购，海淘攻略，让你网购更有价值 _ 网购推荐分享第①站.html"
-           class="nav_logo_ico">留住你</a>
-        <ul class="top_navigation">
-            <li class="current"><a
-                        href="./images/留住你 _ 发现什么最值得买，精选网购优惠信息，分享超值购，海淘攻略，让你网购更有价值 _ 网购推荐分享第①站.html">首页</a>
-            </li>
-            <li><a href="http://www.liuzhuni.com/publish/">全民爆料</a></li>
-            <li><a href="http://www.liuzhuni.com/baicai/">极速白菜</a></li>
-            <li><a href="http://www.liuzhuni.com/shaidan/">好货晒单</a></li>
-
-            <li><a href="http://www.liuzhuni.com/1111/jiankong/?f=nav">神价监控</a></li>
-            <li><a href="http://www.liuzhuni.com/coupon/">免费领券</a></li>
-            <li><a href="http://www.liuzhuni.com/push/">手机APP</a></li>
-        </ul>
-
-        <div class="top_nav_search fr">
-            <form onsubmit="return searchKey($(this))" method="get" action="">
-                <input type="text" id="nav_keywords" class="nav_keywords txt_focus" name="s" autocomplete="off"
-                       value="请输入想找的宝贝" lang="请输入想找的宝贝">
-                <input type="submit" class="nav_search_btn" value="">
-            </form>
-        </div>
-
-    </div>
-</div>
-<!-- topnav end-->
-
-
-<!-- 页脚 -->
-<div class="footer">
-    <div class="grid_auto footer_container">
-        <div class="footer_item cf">
-            <dl>
-                <dt>关于我们</dt>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/contents/aboutus/">网站简介</a></dd>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/help/">帮助中心</a></dd>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/outlink">友情链接</a></dd>
-            </dl>
-            <dl>
-                <dt>联系我们</dt>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/contectus">媒体联系</a></dd>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/contents/feedback/">意见反馈</a></dd>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/Detail/30788.html">加入我们</a></dd>
-            </dl>
-            <dl>
-                <dt>网站地图</dt>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/publish/">全民爆料</a></dd>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/baicai/">极速白菜</a></dd>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/mall/">商场导航</a></dd>
-
-            </dl>
-            <dl>
-                <dt>实时推送</dt>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/push">订阅推荐</a></dd>
-                <dd><a target="_blank"
-                       href="https://ext.chrome.360.cn/webstore/detail/ophnollfhdjmldangbdglokiaojifbif">360极速浏览器</a>
-                </dd>
-                <dd><a target="_blank" href="http://www.liuzhuni.com/push#push_rrs">RSS订阅</a></dd>
-            </dl>
-            <div class="site_m fr">
-                <dl>
-                    <dt>手机客户端</dt>
-                    <dd><a target="_blank" href="http://www.liuzhuni.com/app"><img
-                                    src="./images/app_qrcode.png"
-                                    alt="http://m.liuzhuni.com"></a></dd>
-                    <dd>m.liuzhuni.com</dd>
-                </dl>
-            </div>
-        </div>
-        <div class="site_copy">
-            <p class="copyright">版权所有，未经书面许可，禁止一切形式的转载；copyright© 2012-2015 留住你 All rights reserved.</p>
-
-            <div class="footer_trust cf">
-                <a class="trust" href="http://www.miibeian.gov.cn/" target="_blank">闽ICP备13003632号-1</a>
-                <a class="trust trust2" href="http://www.fj.cyberpolice.cn/" rel="nofollow"
-                   target="_blank">福建网警网络110</a>
-                <a class="trust trust3" href="http://www.zx110.org/" rel="nofollow" target="_blank">网络社会征信网</a>
-                <a class="trust trust4" href="http://www.aliyun.com/" rel="nofollow" target="_blank">阿里云安全数据库服务</a>
-                <a class="trust trust5" href="http://webscan.360.cn/" target="_blank">360网站安全检测</a>
-                <a key="54b77428c274e75d23f8b88d" logo_size="124x47" logo_type="realname"
-                   href="http://www.anquan.org/authenticate/cert/?site=www.liuzhuni.com&at=realname" target="_blank">
-                    <script src="./js/aq_auth.js"></script>
-                    <span style="display:none;" class="LOGO_aq_jsonp_wrap_" id="AQ_logo_span_init_1"><script
-                                src="./js/saved_resource" type="text/javascript" async="true"></script></span><img
-                            src="./images/sm_124x47.png" alt="安全联盟认证" width="124" height="47" style="border: none;"></a>
-                <input type="hidden" value="2011" lang="0311" id="udate">
-            </div>
-            <div class="you_lian">友情链接：
-                <a class="for_vote" href="http://www.liuzhuni.com/publish/" target="_blank">全民爆料</a>
-                <a class="for_vote" href="http://www.100yue.com/" target="_blank">百悦网</a>
-                <a class="for_vote" href="./#" target="_blank">留住</a>
-                <a class="for_vote" href="http://www.huim.com/app/" target="_blank">惠喵</a>
-            </div>
+            <% include itemListTemp %>
+            <% include mainSide %>
+            <% include sideNav %>
+            <!-- 超值精选 end-->
         </div>
     </div>
+    <!-- 主内容 end -->
+    <% include topNav %>
+
+    <% include footer %>
+
+    <script type="text/javascript" src="./js/base.js"></script>
+
+    <script type="text/javascript" src="./js/home.js"></script>
+    <div id="layer_box" style="display: block;"><a class="gotop_btn" title="回到顶部" href="javascript:void(0);">回到顶部</a><a
+                class="suggest_btn" target="_blank" href="http://www.wjsam.com/contents/feedback/">意见反馈</a></div>
+
+    <script type="text/javascript" src="./js/setRefreshTime"></script>
+
+    <div style="height:0;overflow:hidden;">
+        <script type="text/javascript"> var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan id='cnzz_stat_icon_1255777601'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255777601' type='text/javascript'%3E%3C/script%3E"));</script>
+    </div>
+
+
+    <script src="http://l.tbcdn.cn/apps/top/x/sdk.js?appkey=23260260"></script>
+    <script type="text/javascript">
+        (function (win, doc) {
+            var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0];
+            var uid = "";
+            if (isLogin()) {
+                uid = $("#udate").val() + _user.UserId + $("#udate").attr("lang");
+            }
+            if (!win.alimamatk_show) {
+                s.charset = "gbk";
+                s.async = true;
+                s.src = "http://a.alimama.cn/tkapi.js";
+                h.insertBefore(s, h.firstChild);
+            }
+            var o = {
+                pid: "mm_41207736_11396887_40958751", /*推广单元ID，用于区分不同的推广渠道*/
+                appkey: "23260260", /*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/
+                unid: uid, /*自定义统计字段*/
+                type: "click" /* click 组件的入口标志 （使用click组件必设）*/
+            };
+            win.alimamatk_onload = win.alimamatk_onload || [];
+            win.alimamatk_onload.push(o);
+        })(window, document);
+    </script>
+
+    <script>
+        (function () {
+            var bp = document.createElement('script');
+            bp.src = '//push.zhanzhang.baidu.com/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
 </div>
-<!-- 页脚 end -->
-
-<script type="text/javascript" src="./js/base.js"></script>
-
-<script type="text/javascript" src="./js/home.js"></script>
-<div id="layer_box" style="display: block;"><a class="gotop_btn" title="回到顶部" href="javascript:void(0);">回到顶部</a><a
-            class="suggest_btn" target="_blank" href="http://www.liuzhuni.com/contents/feedback/">意见反馈</a></div>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        var reset = 0;
-        $(window).scroll(function () {
-            fun_scroll();
-        });
-        //滚动方法
-        function fun_scroll() {
-            if (reset == 1) {
-                return;
-            }
-            if ($(window).scrollTop() >= $(document).height() - $(window).height() - 300) {
-                reset = 1;
-                getclist();
-            }
-        }
-
-        function getclist() {
-            var path = escape($("#divpageinfo").html());
-            var pnum = $("#clspnum").html();
-            var pindex = Number($(".page_cur").html()) + 1;
-            if (isNaN(Number(pindex)) || Number(pnum) <= 0) {
-                return;
-            }
-            if (Number($(".page_cur").html()) % 4 == 0) {
-                $("#site_loading").hide();
-                return;
-            }
-            if (Number(pnum) <= Number(pindex)) {
-                return;
-            }
-            $("#indexloading").show();
-            var type = "/page/" + pindex; //$("#divpageinfo").html();
-            type = path.replace("/page/" + $(".page_cur").html(), "") + type;
-            $.ajax({
-                url: "/ajax/_CPages",
-                data: "type=" + type + "&pnum=" + pnum + "&pindex=" + pindex,
-                success: function (data) {
-                    $(".site_page").html(data);
-
-                    $.ajax({
-                        url: "/ajax/_ContentsPage",
-                        data: "type=" + type,
-                        success: function (data) {
-                            $("#ulmain").append(data);  //将ajxa请求的数据追加到内容里面
-                            $("#site_loading").hide();
-
-                            // 图片懒加载
-                            lazyLoading($("img.lazyload"));
-
-                            reset = 0;
-                        }
-                    })
-                }
-            })
-        }
-    });
-
-</script>
-
-<script type="text/javascript" src="./js/setRefreshTime"></script>
-
-
-<div  style = "height:0;overflow:hidden;" />
-< script
-type = "text/javascript" >
-var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cspan id='cnzz_stat_icon_1255777601'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255777601' type='text/javascript'%3E%3C/script%3E"));</script>
-
-<script src="./js/sdk.js"></script>
-<script type="text/javascript">
-    (function (win, doc) {
-        var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0];
-        var uid = "";
-        if (isLogin()) {
-            uid = $("#udate").val() + _user.UserId + $("#udate").attr("lang");
-        }
-        ;
-        if (!win.alimamatk_show) {
-            s.charset = "gbk";
-            s.async = true;
-            s.src = "http://a.alimama.cn/tkapi.js";
-            h.insertBefore(s, h.firstChild);
-        }
-        ;
-        var o = {
-            pid: "mm_40490058_3499195_32418641", /*推广单元ID，用于区分不同的推广渠道*/
-            appkey: "21468393", /*通过TOP平台申请的appkey，设置后引导成交会关联appkey*/
-            unid: uid, /*自定义统计字段*/
-            type: "click" /* click 组件的入口标志 （使用click组件必设）*/
-        };
-        win.alimamatk_onload = win.alimamatk_onload || [];
-        win.alimamatk_onload.push(o);
-    })(window, document);
-</script>
-
-<script>
-    (function () {
-        var bp = document.createElement('script');
-        bp.src = '//push.zhanzhang.baidu.com/push.js';
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
 </body>
 </html>

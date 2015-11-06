@@ -1,44 +1,83 @@
-<div ng-controller='PostListController'>
-    <div infinite-scroll='products.nextPage()' infinite-scroll-disabled='products.busy' infinite-scroll-distance='1'>
-        <div ng-repeat='item in products.items'>
+<div class="zhi_container fl">
+    <div id="ulmain">
+        <div ng-controller='PostListController'>
+            <div infinite-scroll='products.nextPage()' infinite-scroll-disabled='products.busy'
+                 infinite-scroll-distance='1'>
+                <div ng-repeat='item in products.items'>
 
-            <div class="zhi_list cf">
-                <div class="list_pic fl">
-                    <a target="_blank" href="/detail/{{item._id}}.html"><img
-                                src="{{item.thumbSrc}}"
-                                alt="">
-                    </a>
-                </div>
-                <div class="list_info fl">
-                    <p class="list_tit"><a target="_blank" href="/detail/{{item._id}}.html">{{item.title}} </a></p>
+                    <div class="zhi_list cf">
+                        <div class="list_pic fl">
+                            <a target="_blank" href="/detail/{{item._id}}.html"><img
+                                        src="{{item.thumbSrc}}"
+                                        alt="">
+                            </a>
+                        </div>
+                        <div class="list_info fl">
+                            <p class="list_tit"><a target="_blank" href="/detail/{{item._id}}.html">{{item.title}} </a>
+                            </p>
 
-                    <p class="list_price"><a target="_blank" href="/detail/{{item._id}}.html">{{item.price}}</a>
-                    </p>
+                            <p class="list_price"><a target="_blank" href="/detail/{{item._id}}.html">{{item.price}}</a>
+                            </p>
 
-                    <div class="list_doc">
-                        {{item.detail}}
+                            <div class="list_doc">
+                                {{item.detail}}
+                            </div>
+                            <div class="list_action">
+                                <p class="list_label">
+                                    <a href="http://www.liuzhuni.com/0-3-0-0-0/">{{item.from}}</a><a target="_blank"
+                                                                                                     href="http://www.liuzhuni.com/detail/49126.html#comment">评论2</a>
+                                </p>
+
+                                <p class="list_page">
+                                    <span class="pub_time"><i class="ico_clock"></i>今天 19:53</span>
+                                    <span class="page_num">326人已浏览</span>
+                                </p>
+                                <a target="_blank" class="list_buy_btn" href="/url/{{item._id}}.html"><span>前往购买</span></a>
+                            </div>
+                        </div>
+                        <div class="tab_tips">
+                        </div>
                     </div>
-                    <div class="list_action">
-                        <p class="list_label">
-                            <a href="http://www.liuzhuni.com/0-3-0-0-0/">{{item.from}}</a><a target="_blank"
-                                                                                             href="http://www.liuzhuni.com/detail/49126.html#comment">评论2</a>
-                        </p>
 
-                        <p class="list_page">
-                            <span class="pub_time"><i class="ico_clock"></i>今天 19:53</span>
-                            <span class="page_num">326人已浏览</span>
-                        </p>
-                        <a target="_blank" class="list_buy_btn" href="/url/{{item._id}}.html"><span>前往购买</span></a>
+                    <div ng-show='products.busy'>
+                        <img class="loading-ic"
+                             src="./images/loading.gif" alt="加载">小编为您加载中....
                     </div>
-                </div>
-                <div class="tab_tips">
                 </div>
             </div>
-
-            <div ng-show='products.busy'>Loading data...</div>
         </div>
     </div>
+
+    <!-- 分页 -->
+    <div class="site_page">
+        <!-- 翻页区   -->
+    <span class="page_area">
+            <a href="http://www.wjsam.com/page/1" class="page_prev" title="上一页"
+               onclick="getAsynContent($(this));return false;">&lt;</a>
+            <a href="http://www.wjsam.com/page/1"
+               onclick="getAsynContent($(this));return false;">1</a>
+            <span class="page_cur">2</span>
+            <a href="http://www.wjsam.com/page/3"
+               onclick="getAsynContent($(this));return false;">3</a>
+            <a href="http://www.wjsam.com/page/4"
+               onclick="getAsynContent($(this));return false;">4</a>
+            <a href="http://www.wjsam.com/page/5"
+               onclick="getAsynContent($(this));return false;">5</a>
+            <a href="http://www.wjsam.com/page/6"
+               onclick="getAsynContent($(this));return false;">6</a>
+            <span>....</span>
+            <a href="http://www.wjsam.com/page/3269" onclick="getAsynContent($(this));return false;">3269</a>
+            <a href="http://www.wjsam.com/page/3" class="page_next" title="下一页"
+               onclick="getAsynContent($(this));return false;">&gt;</a>
+    </span>
+
+        <div id="divpageinfo" style="display:none">http://www.wjsam.com/page/2</div>
+        <div id="clspnum" style="display:none">3269</div>
+    </div>
+    <!-- 分布 end-->
 </div>
+
+
 <script>
     var indexAppModule = angular.module('indexApp', ['infinite-scroll']);
 
