@@ -176,6 +176,5 @@ function parseDetail(detailUrl, product) {
             console.error("detail:" + detailUrl);
             console.error(e);
         }
-
     });
 }

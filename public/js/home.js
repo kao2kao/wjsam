@@ -133,46 +133,6 @@ $(".side_nav .mall_list").hover(function () {
 
 // 热门推荐固定浮动
 
-
-
-
-// 换新装了
-//if (!$.cookie('revision_pop')) {
-//    var _popHtml = '<div id="revision_pop" class="ui_popbox" onclick="closeRevisionPop();">' +
-//	                    '<a class="popbox_close" href="javascript:closeRevisionPop();" title="关闭">x</a>' +
-//	                    '<div class="popbox_content revision_pop_cot">'+
-//                            '<a class="open_revision" href="javascript:closeRevisionPop();"></a>' +
-//	                    '</div>'+
-//                    '</div>'+
-//                    '<div id="ui_layoutbg" class="revision_bg" style="display:block;opacity:0.5;filter:alpha(opacity=50);"></div>';
-//    $('body').append(_popHtml);
-//}
-//function closeRevisionPop() {
-//    $.cookie('revision_pop', 'true', { path: "/", expires: 3000, domain: _domain });
-//    $('#revision_pop').remove();
-//    $(".revision_bg").remove();
-//}
-
-
-// 1111红包
-if (!$.cookie('1111hongbao')) {
-    var _popHtml = '<div id="hb_pop" class="ui_popbox">' +
-                        '<a class="popbox_close" href="javascript:closehbPop();" title="关闭">x</a>' +
-                        '<a class="hb_enter" href="http://s.click.taobao.com/npHZqmx" target="_blank"></a>' +
-                    '</div>' +
-                    '<div id="ui_layoutbg" style="display:block;opacity:0.7;filter:alpha(opacity=70);"></div>';
-
-    $('body').append(_popHtml);
-}
-
-function closehbPop() {
-    $.cookie('1111hongbao', 'true', { path: "/", expires: 3000, domain: _domain });
-    //$.cookie('1111hongbao', 'true');
-    $('#hb_pop').remove();
-    $('#ui_layoutbg').remove();
-}
-
-
 // 浏览模式切换引导
 if (!$.cookie('showtype_pop')) {
     var _popHtml = '<div id="showtype_pop" style="position:absolute;top:-25px;left:-315px;width:364px;height:81px;background:url(/content_new/images/show_type_pop.png) no-repeat;">'+
