@@ -1,0 +1,32 @@
+<div ng-controller='InfiniteScrollCtrl'>
+    <div infinite-scroll='products.nextPage()' infinite-scroll-disabled='products.busy' infinite-scroll-distance='1'>
+        <div ng-repeat='item in products.items'>
+            <div class="panel wrapper">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img alt="{{item.article_title}}" src="{{item.article_pic}}" alt="">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="m-b">
+                            <a href="/detail/{{item._id}}.html" target="_blank" class="item-title">{{item.article_title}}</a>
+                            <span class="price">{{item.article_price}}</span>
+                        </div>
+                        <div class="m-b">
+                            {{item.article_content}}
+                        </div>
+                        <div class="m-b">
+                            <span>by <a href="#"> {{item.from}}</a></span>
+                            <span>{{ item.gmt_created | date:'yyyy-MM-dd HH:mm:ss' }}</span>
+                            <span>Tag<a href="#" ng-repeat='tag in item.article_category'>{{tag.title + ' '}}</a></span>
+                            <a href="/url/{{item._id}}.html" target="_blank"
+                               class="button read-more-button big button-arrow"
+                               rel="nofollow"
+                               style="text-align: center" _hover-ignore="1">BUY URL &gt;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-show='products.busy'>Loading data...</div>
+    </div>
+</div>

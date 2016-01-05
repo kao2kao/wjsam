@@ -1,5 +1,4 @@
-node_modules/*
-bower_components
-logs
-node_modules
-.idea
+/client/node_modules
+/client/bower_components
+/server/node_modules
+dist
