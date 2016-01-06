@@ -10,6 +10,6 @@ module.exports = {
       'src/js/filters/*.js',
       'src/js/controllers/bootstrap.js'
     ],
-    dest:'../server/dist/js/dist.js'
+    dest:'dist/js/dist.js'
   }
 }

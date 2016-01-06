@@ -1,3 +1,9 @@
+var path = require('path');
+var compileCss = require('es-css2js/lib/compile');
+var modulesFiles = [];
+var namespaces = {};
+var env = 'dev';
+var cp = require('child_process');
 module.exports = {
     dev: {
         nonull: true,
@@ -72,8 +78,131 @@ module.exports = {
     },
     dist: {
         files: [
-            {expand: true, dest: '../server/dist/', src:'**', cwd:'src/'},
-            {dest: '../server/dist/index.html', src:'../src/index.min.html'}
+            {expand: true, dest: 'dist/', src:'**', cwd:'src/'},
+            {dest: 'dist/index.html', src:'src/index.min.html'}
         ]
+    },
+    compile: {
+        files:[{
+            cwd: 'src',
+            expand: true,
+            src: ['./**/*.js', './**/*.less', './**/*.html'],
+            dest: 'dist/',
+            rename:function(filepath, name){
+                var ext = path.extname(name);
+                if(ext === '.less'){
+                    name = name.replace(/\.less$/, '.js');
+                }else if(ext === '.html'){
+                    name = name.replace(/\.html$/, '.js');
+                }
+                return path.resolve(filepath, name);
+            }
+        }],
+        options: {
+            process: compileAngularModule
+        }
     }
 };
+function compileAngularModule(content, srcpath){
+    var root = srcpath.split('/')[0];
+    var moduleFullPath = path.relative(root, srcpath);
+    var ext = path.extname(moduleFullPath);
+    var basename = path.basename(moduleFullPath, ext);
+    var dirname = path.dirname(moduleFullPath);
+    var modulePath = path.join(dirname, basename);
+    var absoluteDirname = path.dirname(path.resolve(__dirname, srcpath));
+    var name = modulePath.replace(new RegExp('\\' + path.sep, 'g'), '.');
+    //push file to module file list
+    modulesFiles.push(modulePath + '.js');
+    //push module name to namespaces
+    var namespace = getNameSpace(name);
+    if(namespace){
+        var contains = namespaces[namespace];
+        if(!contains)contains = namespaces[namespace] = [];
+        contains.push(name);
+    }
+    //compile less file to js
+    if(ext == '.less'){
+       // content = compileLess(content, absoluteDirname);
+    }
+    //compile html file to js
+    if(ext == '.html'){
+        content = compileHtml(content, absoluteDirname);
+    }
+
+    //replace assets url
+    content = replaceAssetsUrl(content, env);
+
+    //compile js
+    content = content.replace(/(angular\.module\()\s*(\'@\'|\"@\")/g, '$1\'' + name + '\'');
+    content = content.replace(/(\$templateCache\.put\()\s*[\'\"]@[\'\"]\s*(\,.+\))/g, '$1\'' + name + '\'$2');
+
+    //remove unnecessary comma
+    content = content.replace(/\,([(\r?\n)\s]*)\}/g, '$1}');
+
+    //wrap
+    content = '(function(){' + content + '\n})();';
+    return content;
+}
+
+
+function compileLess(content, filepath){
+    var css = cp.execFileSync('node', [path.resolve(__dirname, './task/compileLess.js'), content, filepath]).toString();
+    var result = compileCss(css, function(content){
+        return 'angular.module("@",[]).run(function(){' + content + '})';
+    });
+    return result;
+}
+
+function compileHtml(content, filepath){
+    if(!content)content = '';
+    var lines = content.split(/\r?\n/);
+    var lineCount = lines.length;
+
+    var string = '[' + lines.map(function (line, index) {
+            var isLastOne = index === (lineCount - 1);
+            line = line.replace(/\\/g, '\\\\');
+            line = line.replace(/\"/g, '\\"');
+            return '"' + line + '' + (!isLastOne ? '\\n' : '') + '"';
+        }).join(',') + '].join("")';
+    return 'angular.module("@", []).run(["$templateCache", function($templateCache){$templateCache.put("@", ' + string + ')}])';
+}
+
+function getNameSpace(name){
+    if(!name)return '';
+    var namespace = name.split('.');
+    if(namespace.length > 1){
+        namespace[namespace.length - 1] = '*';
+        namespace = namespace.join('.');
+    }else{
+        namespace = '';
+    }
+    return namespace;
+}
+
+function replaceAssetsUrl(content, env){
+    return content.replace(/\{@@ASSETS_URL\}/g, "/");
+}
+
+
+function compileLess(content, filepath){
+    var css = cp.execFileSync('node', [path.resolve(__dirname, './compileLess.js'), content, filepath]).toString();
+    var result = compileCss(css, function(content){
+        return 'angular.module("@",[]).run(function(){' + content + '})';
+    });
+    return result;
+}
+
+function compileHtml(content, filepath){
+    if(!content)content = '';
+    var lines = content.split(/\r?\n/);
+    var lineCount = lines.length;
+
+    var string = '[' + lines.map(function (line, index) {
+            var isLastOne = index === (lineCount - 1);
+            line = line.replace(/\\/g, '\\\\');
+            line = line.replace(/\"/g, '\\"');
+            return '"' + line + '' + (!isLastOne ? '\\n' : '') + '"';
+        }).join(',') + '].join("")';
+    return 'angular.module("@", []).run(["$templateCache", function($templateCache){$templateCache.put("@", ' + string + ')}])';
+}

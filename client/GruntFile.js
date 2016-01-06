@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     gtx.config(gruntConfig);
 
     // We need our bower components in order to develop
+    gtx.alias('default',  ['connect', 'open','watch']);
     gtx.alias('build:dev',  ['recess:app', 'copy:dev']);
     gtx.alias('build:dist', ['clean:dist', 'copy:dist', 'clean:dists', 'recess:min', 'concat:dist', 'uglify:dist']);
 

@@ -19,7 +19,7 @@ app.factory('Products', function ($http) {
         if (this.busy) return;
         this.busy = true;
 
-        var url = "api/json_more?timesort=";
+        var url = "json_more.json?timesort=";
         $http.get(url).success(function (data) {
             Array.prototype.push.apply(this.items, data);
             //this.items.concat(data);
