@@ -11,19 +11,19 @@ app.factory('Products', function ($http) {
     var Products = function () {
         this.items = [];
         this.busy = false;
-        this.after = '';
-        this.page = 0;
+        this.lastTimesort = '';
+        this.page = 1;
     };
 
     Products.prototype.nextPage = function () {
         if (this.busy) return;
         this.busy = true;
 
-        var url = "json_more.json?timesort=";
+        var url = "json_more.json?timesort=" + this.lastTimesort;
         $http.get(url).success(function (data) {
             Array.prototype.push.apply(this.items, data);
             //this.items.concat(data);
-            this.after = "t3_" + this.items[this.items.length - 1]._id;
+            this.lastTimesort = data[data.length - 1].timesort;
             this.busy = false;
             this.page += 1;
         }.bind(this));

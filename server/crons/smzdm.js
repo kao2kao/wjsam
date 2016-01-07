@@ -17,7 +17,7 @@ var url = "http://www.smzdm.com/json_more?timesort=",
     deleteRepeat = {},	//去重哈希数组
     articlesArray = [],	//存放爬取网址
     catchDate = [],	//存放爬取数据
-    pageNum = 2,	//要爬取文章的页数
+    pageNum = 1,	//要爬取文章的页数
     userAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.93 Safari/537.36',
     cookie = '__jsluid=73ce565979d2d871c5db67c1bfb74a9c; __jsl_clearance=1442988612.178|0|vT%2BsW7w06Rq%2FenjYxHjrkuHuEdw%3D';
 
@@ -99,9 +99,13 @@ function saveArticle(article) {
                                 if (err) {
                                     console.log(err);
                                 }
+                                if (pres == null || typeof(pres.text) == "undefined") {
+                                    console.info("midUr is error 1:" + midUrl + "use union url:" + unionUrl);
+                                    proxy.emit('article_link', unionUrl);
+                                }
                                 var midUrl = pres.text.substring(pres.text.lastIndexOf("hrl='") + 5, pres.text.lastIndexOf("' ;(function ()"));
                                 if (midUrl.indexOf("jd.com") < 0) {
-                                    console.info("midUr is error:" + midUrl + "use union url:" + unionUrl);
+                                    console.info("midUr is error 2:" + midUrl + "use union url:" + unionUrl);
                                     proxy.emit('article_link', unionUrl);
                                 }
                                 superagent.get(midUrl).end(function (err, pres) {
