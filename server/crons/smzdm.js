@@ -53,6 +53,8 @@ function saveArticle(article) {
         proxy.all('article_link', 'article_pic', function (article_link, article_pic) {
             article.article_link = article_link;
             article.article_pic = article_pic;
+            var $ = cheerio.load("<p>" + article.article_content + "</p>");
+            article.article_content = $("p").text();
 
             var instance = new Article(article);
             instance.save(function (err) {
@@ -72,8 +74,8 @@ function saveArticle(article) {
         proxy.emit('article_pic', article_pic);
 
 
-        //处理直达链接tmall.com viglink.com
-        if (linkUrl.indexOf("tmall.com") >= 0 || linkUrl.indexOf("viglink.com") >= 0 || linkUrl.indexOf("taobao.com") >= 0) {
+        //处理直达链接tmall.com viglink.com smzdm.com/youhui/
+        if (linkUrl.indexOf("tmall.com") >= 0 || linkUrl.indexOf("viglink.com") >= 0 || linkUrl.indexOf("taobao.com") >= 0 || linkUrl.indexOf("smzdm.com/youhui") >= 0) {
             var article_link = linkUrl;
             proxy.emit('article_link', article_link);
         }
@@ -102,11 +104,13 @@ function saveArticle(article) {
                                 if (pres == null || typeof(pres.text) == "undefined") {
                                     console.info("midUr is error 1:" + midUrl + "use union url:" + unionUrl);
                                     proxy.emit('article_link', unionUrl);
+                                    return;
                                 }
                                 var midUrl = pres.text.substring(pres.text.lastIndexOf("hrl='") + 5, pres.text.lastIndexOf("' ;(function ()"));
                                 if (midUrl.indexOf("jd.com") < 0) {
                                     console.info("midUr is error 2:" + midUrl + "use union url:" + unionUrl);
                                     proxy.emit('article_link', unionUrl);
+                                    return;
                                 }
                                 superagent.get(midUrl).end(function (err, pres) {
                                     article_link = midUrl;
@@ -116,11 +120,13 @@ function saveArticle(article) {
                                         console.info("midUr is sssss:" + midUrl);
                                     }
                                     proxy.emit('article_link', article_link);
+                                    return;
                                 })
                             })
                         } else {
                             article_link = unionUrl
                             proxy.emit('article_link', article_link);
+                            return;
                         }
                     } catch (e) {
                         console.info("linkUrl:" + linkUrl);

@@ -4,7 +4,7 @@ html{
 
 body{
 	overflow:hidden;
-	font: 15px/23px 'Open Sans', Segoe UI, Arial, sans-serif;
+	font-family:"Helvetica","Hiragino Sans GB","Microsoft Yahei",sans-serif;font-size:14px;
 	color:#3e474c;
 	background:url(../img/body-background.jpg) repeat;
 }

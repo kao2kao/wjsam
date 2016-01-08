@@ -10,7 +10,7 @@ var i = 1;
 //smzdm 5分钟抓取一次
 var sched = later.parse.recur().every(5).minute(),
     t = later.setInterval(function () {
-       /* if (i > 1) {
+        /*if (i > 1) {
             return;
         }*/
         console.log("sprider zdm start:" + new Date());
