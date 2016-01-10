@@ -52,3 +52,15 @@ a.goTotop {
     height: 30px;
     display: none;
 }*/
+
+.panel:hover {
+    box-shadow: rgb(170, 170, 170) 0px 0px 15px;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+}
