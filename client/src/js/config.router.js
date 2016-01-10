@@ -538,6 +538,16 @@ angular.module('app')
                               return $ocLazyLoad.load('js/controllers/infiniteScroll.js');
                           }]
                   }
+              }).
+              state('detail', {
+                  url: '/detail',
+                  templateUrl: 'tpl/main.html',
+                  resolve: {
+                      deps: ['$ocLazyLoad',
+                          function( $ocLazyLoad){
+                              return $ocLazyLoad.load('js/controllers/detail.js');
+                          }]
+                  }
               })
       }
     ]

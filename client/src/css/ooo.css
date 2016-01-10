@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?62llrb');
+    src: url('../fonts/icomoon.eot?62llrb#iefix') format('embedded-opentype'), url('../fonts/icomoon.woff2?62llrb') format('woff2'),
+         url('../fonts/icomoon.ttf?62llrb') format('truetype'), url('../fonts/icomoon.woff?62llrb') format('woff'),
+         url('../fonts/icomoon.svg?62llrb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+
+.commodity-nav, .merchant-nav, .brand-nav {
+    box-sizing: border-box;
+    margin-top: 15px;
+    overflow: hidden;
+    padding-left: 1px;
+    padding-top: 1px;
+}
+
+.commodity-nav span:hover, .merchant-nav div:hover {
+    color: #d62222;
+    border-color: #f34643;
+    z-index: 1;
+}
+
+.commodity-nav span, .merchant-nav div {
+    font-size: 12px;
+    display: inline-block;
+    float: left;
+    width: 100px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    box-sizing: border-box;
+    margin-left: -1px;
+    margin-top: -1px;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    color: #666;
+    background-color: white;
+    overflow: hidden;
+}
+
+.commodity-nav i {
+    margin-right: 5px;
+    vertical-align: sub;
+    color: #ffa09b;
+}
+
+/*
+a.goTotop {
+    padding-top: 20px;
+    height: 30px;
+    display: none;
+}*/
