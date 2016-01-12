@@ -540,8 +540,8 @@ angular.module('app')
                   }
               }).
               state('detail', {
-                  url: '/detail',
-                  templateUrl: 'tpl/main.html',
+                  url: '/detail/{fold}',
+                  templateUrl: 'tpl/detail.html',
                   resolve: {
                       deps: ['$ocLazyLoad',
                           function( $ocLazyLoad){

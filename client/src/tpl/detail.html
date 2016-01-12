@@ -1,5 +1,5 @@
 <!-- Container -->
-<div class="container">
+<div class="container" ng-controller='DetailCtrl'>
     <!-- Header -->
     <div ui-header></div>
     <!-- /Header -->
@@ -12,19 +12,6 @@
                     <!-- Single Blog Post -->
                     <div class="blog-post-single">
 
-                        <!-- Portfolio Slideshow -->
-                        <div class="portfolio-slideshow flexslider animate-onscroll">
-
-                            <ul class="slides">
-
-                                <li><img src="img/blog/slide1.jpg" alt=""></li>
-                                <li><img src="img/blog/slide2.jpg" alt=""></li>
-                                <li><img src="img/blog/slide3.jpg" alt=""></li>
-                            </ul>
-
-                        </div>
-                        <!-- /Portfolio Slideshow -->
-
                         <div class="post-meta animate-onscroll">
                             <span>by <a href="#">admin</a></span>
                             <span>October 01, 2013 11:28AM</span>
@@ -32,54 +19,22 @@
                         </div>
 
                         <div class="post-content">
-
-                            <p class="animate-onscroll">Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipisMauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet. </p>
-
-                            <blockquote class="align-right animate-onscroll" style="width:45%">"Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar."</blockquote>
-
-
-                            <p class="animate-onscroll">Quisque diam lorem, interdum vitae, dapibus ac, scelerisque vitae, pede. Donec eget tellus non erat lacinia fermentum. Donec in velit vel ipsum auctor pulvinar. Vestibulum iaculis lacinia est. Proin dictum elementum velit. Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adipis. Mauris accumsan nulla vel diam. Sed in lacus ut enim adipiscing aliquet.</p>
-
-                            <p class="animate-onscroll">Vestibulum sed ante. Donec sagittis euismod purus.Sed ut perspiciatis sit voluptatem accusantium doloremque laudantium, totam rem aperiam,eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
-
+                            {{article.article_content_all}}
+                            <p>
+                                <img alt="{{article.article_title}}" src="{{article.article_pic}}" alt="">
+                            </p>
                         </div>
-
-
-                        <!-- Post Meta Track -->
-                        <div class="post-meta-track animate-onscroll">
-
-                            <table class="project-details">
-
-                                <tr>
-                                    <td class="share-media">
-                                        <ul class="social-share">
-                                            <li>Share this:</li>
-                                            <li class="facebook"><a href="#" class="tooltip-ontop" title="Facebook"><i class="icons icon-facebook"></i></a></li>
-                                            <li class="twitter"><a href="#" class="tooltip-ontop" title="Twitter"><i class="icons icon-twitter"></i></a></li>
-                                            <li class="google"><a href="#" class="tooltip-ontop" title="Google Plus"><i class="icons icon-gplus"></i></a></li>
-                                            <li class="pinterest"><a href="#" class="tooltip-ontop" title="Pinterest"><i class="icons icon-pinterest-3"></i></a></li>
-                                            <li class="email"><a href="#" class="tooltip-ontop" title="Email"><i class="icons icon-mail"></i></a></li>
-                                        </ul>
-                                    </td>
-                                    <td class="tags">Tags: <a href="#">meeting</a>, <a href="#">politics</a>, <a href="#">photos</a></td>
-                                </tr>
-
-                            </table>
-
-                        </div>
-                        <!-- /Post Meta Track -->
-
 
 
                         <!-- Pagination -->
                         <div class="row animate-onscroll">
 
                             <div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-left">
-                                <a href="#" class="button big previous">Prev post</a>
+                                <a href="#" class="button big previous">前一条</a>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-6 button-pagination align-right">
-                                <a href="#" class="button big next">Next post</a>
+                                <a href="#" class="button big next">后一条</a>
                             </div>
 
                         </div>
@@ -88,15 +43,14 @@
 
                         <!-- Post Author -->
                         <div class="post-author animate-onscroll">
-
-                            <h4>About Admin</h4>
-
                             <div class="author-info">
                                 <div class="author-img">
                                     <img src="img/testimonials/profile9.jpg" alt="">
                                 </div>
                                 <div class="author-description">
-                                    <p>Vestibulum sed ante. Donec sagittis euismod purus.Sed ut perspiciatis sit voluptatem accusantium doloremque laudantium, totam rem aperiam,eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+                                    <p>
+                                        “我就是爱买”是一个中立的，致力于帮助广大网友买到更有性价比网购产品的分享平台，每天为网友们提供严谨的、准确的、新鲜的、丰富的网购产品特价资讯。我们的信息大部分来自于网友爆料，如果您发现了优质的产品或好的价格，不妨给我们爆料（谢绝商家）吧，点此爆料。优惠信息有时效性和地域性，还请各位网友购买时注意核实。</p>
+
                                 </div>
                             </div>
 
@@ -110,7 +64,7 @@
                     <!-- Related Articles -->
                     <div class="related-articles">
 
-                        <h3 class="animate-onscroll">Related Articles</h3>
+                        <h3 class="animate-onscroll">你可能还喜欢</h3>
 
                         <div class="row">
 
@@ -184,7 +138,7 @@
                     <!-- Post Comments -->
                     <div class="post-comments">
 
-                        <h3 class="animate-onscroll">Comments</h3>
+                        <h3 class="animate-onscroll">热评</h3>
 
                         <ul>
                             <li>
@@ -193,8 +147,10 @@
 
                                     <div class="comment-author">
                                         <img src="img/testimonials/profile1.jpg" alt="">
+
                                         <div class="author-meta">
                                             <h6>Gloria Mann</h6>
+
                                             <div class="comment-meta">
                                                 <span>September 23, 2013 at 11:45 am</span>
                                                 <span><a href="#">Reply</a></span>
@@ -203,8 +159,12 @@
                                     </div>
 
                                     <div class="comment-content">
-                                        <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna."
-                                            Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit.</p>
+                                        <p>Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean
+                                            auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Donec sit amet
+                                            eros. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris
+                                            fermentum dictum magna."
+                                            Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, elementum vel,
+                                            cursus eleifend, elit.</p>
                                     </div>
 
                                 </div>
@@ -217,8 +177,10 @@
 
                                             <div class="comment-author">
                                                 <img src="img/testimonials/profile5.jpg" alt="">
+
                                                 <div class="author-meta">
                                                     <h6>admin</h6>
+
                                                     <div class="comment-meta">
                                                         <span>September 23, 2013 at 11:45 am</span>
                                                         <span><a href="#">Reply</a></span>
@@ -227,7 +189,10 @@
                                             </div>
 
                                             <div class="comment-content">
-                                                <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel, scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam cursus leo vel metus. </p>
+                                                <p>Aenean auctor wisi et urna. Aliquam erat volutpat. Duis ac turpis.
+                                                    Integer rutrum ante eu lacus. Vestibulum libero nisl, porta vel,
+                                                    scelerisque eget, malesuada at, neque. Vivamus eget nibh. Etiam
+                                                    cursus leo vel metus. </p>
                                             </div>
 
                                         </div>
@@ -244,8 +209,10 @@
 
                                     <div class="comment-author">
                                         <img src="img/testimonials/profile1.jpg" alt="">
+
                                         <div class="author-meta">
                                             <h6>Gloria Mann</h6>
+
                                             <div class="comment-meta">
                                                 <span>September 23, 2013 at 11:45 am</span>
                                                 <span><a href="#">Reply</a></span>
@@ -254,7 +221,7 @@
                                     </div>
 
                                     <div class="comment-content">
-                                        <p>Nulla facilisi. Aenean nec eros. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
+                                        <p>值得买</p>
                                     </div>
 
                                 </div>
@@ -266,10 +233,7 @@
                     <!-- /Post Comments -->
 
 
-
-                    <h3 class="animate-onscroll">Leave a reply</h3>
-
-                    <p class="animate-onscroll">Your email address will not be published. Fields marked * are mandatory.</p>
+                    <h3 class="animate-onscroll">留言</h3>
 
                     <form id="comment-form" class="animate-onscroll">
 

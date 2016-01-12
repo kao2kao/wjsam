@@ -56,6 +56,10 @@ function saveArticle(article) {
             var $ = cheerio.load("<p>" + article.article_content + "</p>");
             article.article_content = $("p").text();
 
+            $ = cheerio.load("<p>" + article.article_content_all + "</p>");
+            article.article_content_all = $("p").text();
+
+
             var instance = new Article(article);
             instance.save(function (err) {
                 if (err) {
