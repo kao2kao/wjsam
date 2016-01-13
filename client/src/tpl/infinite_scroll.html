@@ -11,13 +11,20 @@
                             <a href="/#/detail/{{item._id}}.html" target="_blank" class="item-title">{{item.article_title}}</a>
                             <span class="price">{{item.article_price}}</span>
                         </div>
+
+                        <div class="m-b">
+
+                            <span>标签：{{item.article_category.title}}
+                            </span>
+                            <span>{{ item.gmt_created | date:'MM-dd HH:mm' }}</span>
+
+                        </div>
                         <div class="m-b">
                             {{item.article_content}}<a href="/#/detail/{{item._id}}.html" target="_blank" >阅读全文</a>
                         </div>
                         <div class="m-b">
-                            <span>by <a href="#"> {{item.from}}</a></span>
-                            <span>{{ item.gmt_created | date:'yyyy-MM-dd HH:mm:ss' }}</span>
-                            <span>Tag<a href="#" ng-repeat='tag in item.article_category'>{{tag.title + ' '}}</a></span>
+                            <!--<span>SMZDM</span>-->
+                            <span>商城：{{ item.article_mall}}</span>
                             <a href="/url/{{item._id}}.html" target="_blank"
                                class="button read-more-button big button-arrow"
                                rel="nofollow"

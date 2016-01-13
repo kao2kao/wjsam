@@ -15,12 +15,25 @@
                     <!-- /Logo -->
                     <!-- Main Quote -->
                     <div class="col-lg-3 col-md-3 col-sm-3">
-                        <blockquote>实时同步全网折扣，老于&老纪，提点意见啊</blockquote>
+                        <blockquote>实时同步全网折扣，品质消费第一站</blockquote>
                     </div>
                     <!-- /Main Quote -->
                     <!-- Newsletter -->
                     <div class="col-lg-4 col-md-4 col-sm-4">
-                        <blockquote>搜索</blockquote>
+                        <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo"
+                              target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input type="text" ng-model="selected"
+                                           typeahead="state for state in states | filter:$viewValue | limitTo:8"
+                                           class="form-control input-sm bg-light no-border rounded padder"
+                                           placeholder="搜索...">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2">
                         <blockquote>客户端下载</blockquote>
@@ -51,7 +64,7 @@
                         <a href="#">海淘专区</a>
                     </li>
                     <!-- Donate class="donate-button "-->
-                    <li >
+                    <li>
                         <a href="#">搜索</a>
                     </li>
                     <!-- /Donate -->
